@@ -188,7 +188,7 @@ scp -i your-key.pem ubuntu@YOUR-PUBLIC-IP:~/nginx-logs.txt .
 Webpage is accessible from the internet
 ![mob](https://github.com/user-attachments/assets/6254a6ec-6f46-44d0-b601-a2b3901c068e)
 
-##Commands Used
+## Commands Used
 ### 1) chmod 400 your-keyname.pem
 ### 2) ssh -i <mykey> ubuntu@<my instance public-ip>.compute-1.amazonaws.com
 ### 3) sudo apt-get update
