@@ -1,9 +1,9 @@
-# Day 09 – Linux User & Group Management Challenge
+# Day 10 – File Permissions & File Operations Challenge 
 **Date**: February 23, 2026  
-**Repository**: [90DaysOfDevOps](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-09)
+**Repository**: [90DaysOfDevOps](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-10)
 
 ## Task Overview
-Done with Linux file permissions & operations! Created files with `touch/cat/vim`, understood rwx read-write-execute (4+2+1), modified permissions with `chmod`, and tested access failures.<br/>
+Done with Linux file permissions & operations challenges! Created files with `touch/cat/vim`, understood rwx read-write-execute (4+2+1), modified permissions with `chmod`, and tested access failures.<br/>
 
 • Created `devops.txt`, `notes.txt`, `script.sh`<br/>
 • Learned permission numbers: 755=rwxr-xr-x, 640=rw-r-----, 444=r--r--r--<br/>
@@ -21,9 +21,9 @@ Done with Linux file permissions & operations! Created files with `touch/cat/vim
 ## Permission Changes
 | File       | Before | After  | Purpose |
 |------------|--------|--------|---------|
-| script.sh  | 644    | 755    | Executable |
-| devops.txt | 644    | 444    | Read-only |
-| notes.txt  | 644    | 640    | Group read |
+| script.sh  | 664    | 775    | Executable |
+| devops.txt | 664    | 444    | Read-only |
+| notes.txt  | 664    | 640    | Group read |
 
 ---
 ## Challenge Tasks
@@ -39,7 +39,7 @@ touch devops.txt
 ```
 cat > notes.txt << EOF
 >hey, this is the Day-10 of 90daysofdevops
->in previous day-06 we done this specific  insertion by eco thats why in today task we are using cat command
+>In Day 6 we used echo, so today using cat
 >EOF-End of File
 >after that press ctrl+d to save
 >EOF
@@ -134,7 +134,7 @@ chmod -w devops.txt
 
 ### 4) Set `notes.txt` to 640 (owner: rw, group: r, others: none)
 ```
-chmmod 640 notes.txt
+chmod 640 notes.txt
 ```
 ### 5) Create directory project/ 
 ```
@@ -154,7 +154,7 @@ chmod 755 project
 
 ### 1) Try writing to a read-only file 
 ```
-eco "trying to write in read only file" >> devops.txt
+echo "trying to write in read only file" >> devops.txt
 ```
 Shows Permission denied Because devops.txt is read-only file we removed the permission of write.
 
@@ -175,26 +175,31 @@ chmod -x script.sh
 
 ## What I Learned
 
-### • Read, Write, Execute permission management<br/>
+### • Permission numbers = rwx calculations<br/>`r=4, w=2, x=1 → 7 = full access, 4 = read only`
 
-### • chmod +x makes scripts executable instantly<br/>
+### • Scripts need chmod +x to run
+`./script.sh failed → chmod +x fixed it instantly`
 
-### • Read-only files (444) protect critical configs<br/>
+### • Nobody can edit devops.txt 
+`444-get secured`
 
-### • How to deal with Restriction of users to dedicate fill/directory or group management<br/>
+### • Control exactly who sees what<br/>
+`640 = owner+group read, others blind Real team security`
 
 ### • How to Test permissions without switching accounts<br/>
 
-### • Production permission patterns learned today<br/>
+### • One command shows owner/group/others permissions clearly<br/>
+`ls -l tells the info `
 
 --
 
 ## Challenges I Faced
 
-### • Permission denied" on devops.txt<br/>
-### • bash: ./script.sh: Permission denied<br/>
+### • "Permission denied' writing to devops.txt<br/>
+### • "./script.sh: Permission denied"<br/>
 ### • vim accidentally overwrote script.sh<br/>
 ### • Testing permissions as other users<br/>
+### • Confused by "total 0" in empty directories
 
 ## Commands Used
 ```
@@ -203,7 +208,7 @@ touch devops.txt
 ```
 cat > notes.txt << EOF
 >hey, this is the Day-10 of 90daysofdevops
->in previous day-06 we done this specific  insertion by eco thats why in today task we are using cat command
+>In Day 6 we used echo, so today using cat
 >EOF-End of File
 >after that press ctrl+d to save
 >EOF
@@ -254,7 +259,7 @@ chmod -w devops.txt
 ```
 
 ```
-chmmod 640 notes.txt
+chmod 640 notes.txt
 ```
 
 ```
@@ -266,7 +271,7 @@ chmod 755 project
 ```
 
 ```
-eco "trying to write in read only file" >> devops.txt
+echo "trying to write in read only file" >> devops.txt
 ```
 
 ```
