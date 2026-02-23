@@ -173,7 +173,28 @@ chmod -x script.sh
 ### Permission denied: because we remove the execute permission from the `script.sh`
 <img width="672" height="167" alt="10" src="https://github.com/user-attachments/assets/656804dd-e984-4b37-b8e6-5ffeb570cd75" /><br/>
 
-Document the error messages
+## What I Learned
+
+### • Read, Write, Execute permission management<br/>
+
+### • chmod +x makes scripts executable instantly<br/>
+
+### • Read-only files (444) protect critical configs<br/>
+
+### • How to deal with Restriction of users to dedicate fill/directory or group management<br/>
+
+### • How to Test permissions without switching accounts<br/>
+
+### • Production permission patterns learned today<br/>
+
+--
+
+## Challenges I Faced
+
+### • Permission denied" on devops.txt<br/>
+### • bash: ./script.sh: Permission denied<br/>
+### • vim accidentally overwrote script.sh<br/>
+### • Testing permissions as other users<br/>
 
 ## Commands Used
 ```
