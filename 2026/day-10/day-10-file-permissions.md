@@ -176,6 +176,85 @@ chmod -x script.sh
 Document the error messages
 
 ## Commands Used
-```bash
+```
+touch devops.txt
+```
+```
+cat > notes.txt << EOF
+>hey, this is the Day-10 of 90daysofdevops
+>in previous day-06 we done this specific  insertion by eco thats why in today task we are using cat command
+>EOF-End of File
+>after that press ctrl+d to save
+>EOF
+```
+```
+cat notes.txt
+```
+```
+vim script.sh
+
+```
+```
+ls -l script.sh
+ls -l *.txt
+```
+
+```
+cat notes.txt
+```
+
+```
+vim -R script.sh
+
+```
+
+```
+head -5 /etc/passwd
+```
+
+```
+tail -5 /etc/passwd
+```
+
+```
+ls -l devops.txt notes.txt script.sh
+```
+
+```
+chmod +x script.sh
+```
+
+```
+./script.sh
+```
+
+```
+chmod -w devops.txt
+```
+
+```
+chmmod 640 notes.txt
+```
+
+```
+mkdir project
+```
+
+```
+chmod 755 project
+```
+
+```
+eco "trying to write in read only file" >> devops.txt
+```
+
+```
+chmod -x script.sh
+```
+
+```
+./script.sh
+```
+
 
 
