@@ -67,7 +67,9 @@ ls -l *.txt
 ```
 
 <img width="738" height="221" alt="2" src="https://github.com/user-attachments/assets/97778358-a682-452e-802b-211b05a06737" /><br/>
---
+
+---
+
 ## Task 2: Read Files 
 
 ### 1) Read `notes.txt` using `cat`
@@ -97,7 +99,8 @@ tail -5 /etc/passwd
 
 <img width="895" height="382" alt="6" src="https://github.com/user-attachments/assets/230d3ab3-6362-4ca7-b8dc-6a135a89fe7a" /><br/>
 
---
+---
+
 ## Task 3: Understanding Permissions
 ```
 ls -l devops.txt notes.txt script.sh
@@ -114,7 +117,7 @@ Group has read and write permission<br/>
 Other has only Read permission <br/>
 <img width="1567" height="715" alt="rwx" src="https://github.com/user-attachments/assets/85d15805-3af6-407d-b7fc-e7e2079e6a70" /><br/>
 
---
+---
 ## Task 4: Modify Permissions
 
 ### 1) Make `script.sh` executable 
@@ -148,7 +151,7 @@ chmod 755 project
 
 <img width="607" height="497" alt="8" src="https://github.com/user-attachments/assets/da039fd6-4eff-4633-a1da-e48b6d7cdf67" /><br/>
 
---
+---
 
 ## Task 5: Test Permissions 
 
