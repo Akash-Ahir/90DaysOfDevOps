@@ -186,9 +186,6 @@ mkdir bank-heist
 
 5. Set different ownership:
  
-
-   - `escape-plan.txt` → owner: `nairobi`, group: `vault-team`
-   
 - `access-codes.txt` → owner: `tokyo`, group: `vault-team` 
 ```
 sudo chown tokyo:vault-team bank-heist/access-codes.txt
