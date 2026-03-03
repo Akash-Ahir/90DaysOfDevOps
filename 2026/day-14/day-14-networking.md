@@ -4,8 +4,8 @@
 
 ## Task Overview
 Today I checked basic networking on my EC2 instance by finding my IP address, testing google.com
-reachability with ping, tracing the packet route with traceroute, listing listening ports with ss,
-verifying DNS resolution, and confirming HTTP works with curl. I then tested SSH port 22 locally using nc and documented what I'd check if connectivity breaks.
+reachability with `ping`, tracing the packet route with traceroute, listing listening ports with `ss -tulpn`,
+verifying DNS resolution, and confirming HTTP works with `curl`. I then tested SSH port 22 locally using nc and documented what I'd check if connectivity breaks.
 
 ---
 
