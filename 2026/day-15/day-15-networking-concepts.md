@@ -1,14 +1,17 @@
 # Day 15 – Networking Concepts: DNS, IP, Subnets & Ports
-**Date**: February 28, 2026  
+**Date**: March 3, 2026  
 **Repository**: [90DaysOfDevOps](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-15)
 
 ## Task Overview
-Build on Day 14 by understanding the building blocks of networking every DevOps engineer must know.
+Explored how DNS resolves domain names like google.com into IP addresses through A records and caching. understand IP addressing structure, the difference between public IPs and private IPs, and practice identifying them with ip addr show. The tasks cover CIDR notation and subnetting for better security and efficiency, Know ports and their service endpoints.
 
+### • Explore DNS and How Names Become IPs<br/>
+### • Understand whats IP Addressing and what is public and private ips <br/>
+### • Get to know about CIDR and subnetting <br/>
+### • what is port and which port coonect to which services <br/>
 ---
 
 # Challenge Tasks
-
 ## Task 1: DNS – How Names Become IPs
 ### 1. Explain in 3–4 lines: what happens when you type `google.com` in a browser?
 ```
@@ -134,6 +137,8 @@ Answer in 2–3 lines each:
 ---
 ## What I Learned
 ```
+1. Understands how DNS resolves names to IPs
+2. Learn IP addressing (IPv4, public vs private)
+3. Break down CIDR notation and subnetting basics
+4. Know common ports and why they matter
 
-Happy Learning!
-**TrainWithShubham**
