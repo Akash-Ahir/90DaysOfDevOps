@@ -31,8 +31,9 @@ Build on Day 14 by understanding the building blocks of networking every DevOps 
   `MX` ----it is use to receive services for a domain<br/>
   `NS` ----Nameserver responsible for domain<br/>
     
-3. Run: `dig google.com` — identify the A record and TTL from the output
+### 3. Run: `dig google.com` — identify the A record and TTL from the output
    
+<img width="813" height="561" alt="image" src="https://github.com/user-attachments/assets/5cf19f55-b341-40d2-b812-9dd8f3400fe2" />
 
 ---
 
@@ -57,6 +58,7 @@ Build on Day 14 by understanding the building blocks of networking every DevOps 
      
 6. Run: `ip addr show` — identify which of your IPs are private
 
+<img width="827" height="417" alt="ip addresses " src="https://github.com/user-attachments/assets/fcc6f286-ad91-4f3a-8527-2ad0cf927d7c" />
 
 
 
@@ -88,7 +90,7 @@ A subnets is a smaller network inside a large network. subnet makes network rout
 ---
 
 ## Task 4: Ports – The Doors to Services
-1. What is a port? Why do we need them?
+1. What is a port? Why do we need them?<br/>
   Ports are the endpoint for the services.
   Because of port we can manage multiple services with one ip only. if there is no port then we need seperate ips for the different services
   
@@ -110,7 +112,8 @@ A subnets is a smaller network inside a large network. subnet makes network rout
 
 3. Run `ss -tulpn` — match at least 2 listening ports to their services
 
-   
+ <img width="1910" height="255" alt="ss -tulpin" src="https://github.com/user-attachments/assets/48b9ebab-3ecc-43da-adc0-3a9a98453e25" />
+  
 
 ---
 
