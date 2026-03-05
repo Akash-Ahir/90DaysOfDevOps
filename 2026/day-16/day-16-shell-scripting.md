@@ -39,7 +39,7 @@ Getting familiar with the shell scripting which are essential for automating rep
    ```
    - A variable for your `NAME`
    - A variable for your `ROLE` (e.g., "DevOps Engineer")
-   - Print: `Hello, I am <NAME> and I am a <ROLE>`
+   - Print: `Hello, I am <NAME> and I am a <ROLE>`<br/>
      <img width="563" height="180" alt="task 2 1" src="https://github.com/user-attachments/assets/3327b36d-7b90-4aef-bae8-8e3c0fc2ff21" /><br/>
      <img width="655" height="248" alt="task 2 2" src="https://github.com/user-attachments/assets/4e3bf903-d3c5-48d4-904f-19c5421972a6" /><br/>
 
