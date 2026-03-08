@@ -16,6 +16,11 @@
   
   <img width="725" height="237" alt="1 output" src="https://github.com/user-attachments/assets/770ad217-94bb-4208-9db8-1a80e5cfc607" />
 
+
+
+
+(2026/day-18/scripts/functions.sh)
+
   
 ---
 
