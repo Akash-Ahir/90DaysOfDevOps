@@ -86,7 +86,7 @@
   
      <img width="688" height="362" alt="4  output" src="https://github.com/user-attachments/assets/094f105c-bf9a-4014-b46a-5fb4db124c5a" />
 
-     ### [Script](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-18/scripts)
+     ### [Script]([2026/day-18/scripts/local_demo.sh](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-18/scripts/local_demo.sh))
 
 
 ---
