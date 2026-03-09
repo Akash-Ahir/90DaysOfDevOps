@@ -14,12 +14,13 @@
    - A function `add` that takes two numbers and prints their sum
    - Call both functions from the script
   
-  <img width="725" height="237" alt="1 output" src="https://github.com/user-attachments/assets/770ad217-94bb-4208-9db8-1a80e5cfc607" />
+  <img width="725" height="237" alt="1 output" src="https://github.com/user-attachments/assets/770ad217-94bb-4208-9db8-1a80e5cfc607" /><br/>
+
+ ### [Script](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-18/scripts/functions.sh)
 
 
 
 
-(2026/day-18/scripts/functions.sh)
 
   
 ---
