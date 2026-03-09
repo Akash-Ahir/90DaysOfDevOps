@@ -1,9 +1,9 @@
 # Day 18 – Shell Scripting: Functions & intermediate Concepts
-**Date**: March 3, 2026  
+**Date**: March 7, 2026  
 **Repository**: [90DaysOfDevOps](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-18)
 
 ## Task Overview
-
+Learned functions which are the reusable code blocks, strict mode by using set -euo pipefail for error-proof scripts, local vs global variables, and built system_info.sh which display the proper system information on screen.
 
 
 ## Challenge Tasks
@@ -86,7 +86,7 @@
   
      <img width="688" height="362" alt="4  output" src="https://github.com/user-attachments/assets/094f105c-bf9a-4014-b46a-5fb4db124c5a" />
 
-     ### [Script]([2026/day-18/scripts/local_demo.sh](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-18/scripts/local_demo.sh))
+     ### [Script](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-18/scripts/local_demo.sh)
 
 
 ---
@@ -120,26 +120,3 @@ Output should look clean and readable.
 
 ---
 
-## Documentation
-
-Create `day-18-scripting.md` with:
-- Each script's code and output
-- Explanation of `set -euo pipefail`
-- What you learned (3 key points)
-
----
-
-## Submission
-1. Add your scripts and `day-18-scripting.md` to `2026/day-18/`
-2. Commit and push to your fork
-
----
-
-## Learn in Public
-
-Share what you learned about shell functions and strict mode on LinkedIn.
-
-`#90DaysOfDevOps` `#DevOpsKaJosh` `#TrainWithShubham`
-
-Happy Learning!
-**TrainWithShubham**
