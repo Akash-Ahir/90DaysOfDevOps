@@ -78,11 +78,16 @@
 
 ---
 
-### Task 4: Local Variables
+## Task 4: Local Variables
 1. Create `local_demo.sh` with:
    - A function that uses `local` keyword for variables
    - Show that `local` variables don't leak outside the function
    - Compare with a function that uses regular variables
+  
+     <img width="688" height="362" alt="4  output" src="https://github.com/user-attachments/assets/094f105c-bf9a-4014-b46a-5fb4db124c5a" />
+
+     ### [Script](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-18/scripts)
+
 
 ---
 
@@ -95,6 +100,12 @@ Create `system_info.sh` that uses functions for everything:
 5. A function to print **top 5 CPU-consuming processes**
 6. A `main` function that calls all of the above with section headers
 7. Use `set -euo pipefail` at the top
+
+ 
+ <img width="1131" height="567" alt="5  output" src="https://github.com/user-attachments/assets/f7115298-8b62-4074-90ef-775de224c399" /><br/>
+
+
+### [Script](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-18/scripts/system_info.sh)
 
 Output should look clean and readable.
 
