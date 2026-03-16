@@ -13,6 +13,9 @@ Create `log_rotate.sh` that:
 4. Prints how many files were compressed and deleted
 5. Exits with an error if the directory doesn't exist
 
+   
+### [Script](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-19/scripts/log_rotate.sh)
+
 
 
 ---
@@ -26,6 +29,8 @@ Create `backup.sh` that:
 5. Deletes backups older than 14 days from the destination
 6. Handles errors — exit if source doesn't exist
 
+
+### [Script](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-19/scripts/backup.sh)
 ---
 
 ### Task 3: Crontab
@@ -54,6 +59,8 @@ Create `maintenance.sh` that:
 3. Logs all output to `/var/log/maintenance.log` with timestamps
 4. Write the cron entry to run it daily at 1 AM
 
+
+### [Script](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-19/scripts/maintenance.sh)
 ---
 
 
