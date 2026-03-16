@@ -21,8 +21,8 @@ check_source(){
 
 backup(){
     echo "BACKUP IN PROGRESS..."
-    ARCHIVE_file="$DEST/backup-$(date +%Y-%m-%d-%H-%M-%S).tar.gz"  # ← STORE HERE
-    if tar -czf "$ARCHIVE_file" "$SOURCE"; then  # ← USE STORED NAME
+    ARCHIVE_file="$DEST/backup-$(date +%Y-%m-%d-%H-%M-%S).tar.gz"  
+    if tar -czf "$ARCHIVE_file" "$SOURCE"; then  
         echo "BACKUP COMPLETED"
     else
         echo "BACKUP FAILED" >&2
@@ -31,7 +31,7 @@ backup(){
 }
 
 print_file(){
-    size=$(du -h "$ARCHIVE_file" | cut -f1)  # ← USE SAME VARIABLE
+    size=$(du -h "$ARCHIVE_file" | cut -f1) 
     echo "Archive: $ARCHIVE_file"
     echo "Size: $size"
 }
