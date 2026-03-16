@@ -1,8 +1,7 @@
 # Day 19 – Shell Scripting Project: Log Rotation, Backup & Crontab
 
 ## Task
-Apply everything from Days 16–18 in real-world mini projects.
-
+Done with the log rotaion and backup creation with shell script an dschedualing crontab
 ## Challenge Tasks
 
 ### Task 1: Log Rotation Script
@@ -13,7 +12,7 @@ Create `log_rotate.sh` that:
 4. Prints how many files were compressed and deleted
 5. Exits with an error if the directory doesn't exist
 ### [Script](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-19/scripts/log_rotate.sh)
-https://github.com/akashahir50/90DaysOfDevOps/blob/9e308c955f84b8470af7a6e9b18ce6c772b0cc4b/2026/day-19/output/task%201%20output.png
+![alt text](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-19/output/task%201%20output.png?raw=true)
 
 
 
@@ -27,6 +26,8 @@ Create `backup.sh` that:
 4. Prints archive name and size
 5. Deletes backups older than 14 days from the destination
 6. Handles errors — exit if source doesn't exist
+
+![alt text](https://github.com/akashahir50/90DaysOfDevOps/blob/eb16790d4e7a608e3244bc888da3274f2ee5220e/2026/day-19/output/task%202%20output.png)
 
 
 ### [Script](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-19/scripts/backup.sh)
@@ -45,9 +46,9 @@ Create `backup.sh` that:
    └────────── Minute (0-59)
    ```
 3. Write cron entries (in your markdown, don't apply if unsure) for:
-   - Run `log_rotate.sh` every day at 2 AM
-   - Run `backup.sh` every Sunday at 3 AM
-   - Run a health check script every 5 minutes
+   - Run `log_rotate.sh` every day at 2 AM : 0 2 * * *
+   - Run `backup.sh` every Sunday at 3 AM : 0 3 * * 0
+   - Run a health check script every 5 minutes : */5 * * * *
 
 ---
 
@@ -58,12 +59,11 @@ Create `maintenance.sh` that:
 3. Logs all output to `/var/log/maintenance.log` with timestamps
 4. Write the cron entry to run it daily at 1 AM
 
+![alt text](https://github.com/akashahir50/90DaysOfDevOps/blob/eb16790d4e7a608e3244bc888da3274f2ee5220e/2026/day-19/output/task%204%20output.png)
+
 
 ### [Script](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-19/scripts/maintenance.sh)
 ---
 
 
-`#90DaysOfDevOps` `#DevOpsKaJosh` `#TrainWithShubham`
 
-Happy Learning!
-**TrainWithShubham**
