@@ -13,7 +13,6 @@ Create `log_rotate.sh` that:
 4. Prints how many files were compressed and deleted
 5. Exits with an error if the directory doesn't exist
 
-   
 ### [Script](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-19/scripts/log_rotate.sh)
 
 
