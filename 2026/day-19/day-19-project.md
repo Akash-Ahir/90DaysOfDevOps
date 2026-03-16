@@ -56,40 +56,6 @@ Create `maintenance.sh` that:
 
 ---
 
-## Hints
-- Compress old files: `find /path -name "*.log" -mtime +7 -exec gzip {} \;`
-- Timestamp: `date +%Y-%m-%d`
-- Tar: `tar -czf backup.tar.gz /source/dir`
-- Cron edit: `crontab -e`
-- Log with timestamp: `echo "$(date): message" >> logfile`
-
----
-
-## Documentation
-
-Create `day-19-project.md` with:
-- Each script's code
-- Sample outputs
-- Cron entries you wrote
-- What you learned (3 key points)
-
----
-
-## Submission
-1. Add your scripts and `day-19-project.md` to `2026/day-19/`
-2. Commit and push to your fork
-
----
-
-## Reference Video
-
-[![Watch the video](https://img.youtube.com/vi/PZYJ33bMXAw/0.jpg)](https://youtu.be/PZYJ33bMXAw?si=RzEzOSom7-FqnopA)
-
----
-
-## Learn in Public
-
-Share your shell scripting projects on LinkedIn.
 
 `#90DaysOfDevOps` `#DevOpsKaJosh` `#TrainWithShubham`
 
