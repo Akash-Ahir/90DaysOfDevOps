@@ -4,8 +4,31 @@
 **Repository**: [90DaysOfDevOps](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-21)
 
 ## Task Overview
+---
+
+## Quick Reference Table
+
+
+| Topic | Key Syntax | Example |
+|-------|------------|---------|
+| **Variable** | `VAR="value"` | `NAME="DevOps"` |
+| **Argument** | `$1, $2` | `./script.sh arg1` |
+| **If** | `if [ condition ]; then` | `if [ -f file ]; then` |
+| **For loop** | `for i in list; do` | `for i in 1 2 3; do` |
+| **Function** | `name() { ... }` | `greet() { echo "Hi"; }` |
+| **Grep** | `grep pattern file` | `grep -i "error" log.txt` |
+| **Awk** | `awk '{print $1}' file` | `awk -F: '{print $1}' /etc/passwd` |
+| **Sed** | `sed 's/old/new/g' file` | `sed -i 's/foo/bar/g' config.txt` |
+| **Cut** | `cut -d: -f1 file` | `cut -d, -f2 data.csv` |
+| **Logical AND** | `[ cond ] && cmd` | `[ -f file ] && echo "OK"` |
+| **Logical OR** | `[ cond ]` || `cmd` | `[ ! -d dir ] || echo "Dir exists"` |
+| **Logical NOT** | `[ ! cond ]` | `[ ! -f file ] && echo "Missing"` |
+| **Local var** | `local var="value"` | `local temp="/tmp/file"` |
+
 
 ---
+
+#!/bin/bash
 
 ## Challenge Tasks
 
@@ -223,14 +246,14 @@ Document with examples:
 
 ### Task 5: Text Processing Commands
 Document the most useful flags/patterns for each:
-1. `grep` — search patterns `-i`, `-r`, `-c`, `-n`, `-v`, `-E`
-    `grep` =  grep "error" log.txt ( Find pattern)
-    `-i`  =  grep -i "error" log.txt (Case insensitive)
-    `-r`  =  grep -r "TODO" /app (Recursive)
-    `-c`  =  grep -c "error" log.txt (Count)
-    `-n`  =  grep -n "error" log.txt (Line numbers)
-    `-v`  =  grep -v "OK" log.txt (Invert match)
-    `-E`  =  grep -E "error|warn" log.txt (Extended regex)
+1. `grep` — search patterns `-i`, `-r`, `-c`, `-n`, `-v`, `-E`<br/>
+    `grep` =  grep "error" log.txt ( Find pattern)<br/>
+    `-i`  =  grep -i "error" log.txt (Case insensitive)<br/>
+    `-r`  =  grep -r "TODO" /app (Recursive)<br/>
+    `-c`  =  grep -c "error" log.txt (Count)<br/>
+    `-n`  =  grep -n "error" log.txt (Line numbers)<br/>
+    `-v`  =  grep -v "OK" log.txt (Invert match)<br/>
+    `-E`  =  grep -E "error|warn" log.txt (Extended regex)<br/>
 
 2. `awk` — print columns, field separator, patterns, BEGIN/END
 
