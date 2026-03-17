@@ -1,6 +1,6 @@
 # Day 20 – Bash Scripting Challenge: Log Analyzer and Report Generator
 
-**Date**: March 7, 2026  
+**Date**: March 17, 2026  
 **Repository**: [90DaysOfDevOps](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-20)
 
 ## Task Overview
