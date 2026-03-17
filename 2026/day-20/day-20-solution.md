@@ -140,7 +140,7 @@ archive_log() {
 }
 
 ```
-### [log_analyzer.sh]([2026/day-20/script/log_analyzer.sh](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-20/script/log_analyzer.sh))
+### [log_analyzer.sh]([2026/day-20/script/log_analyzer.sh](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-20/script/log_analyzer.sh)
 <img width="815" height="466" alt="output 1" src="https://github.com/user-attachments/assets/6eac382c-8563-4d16-b870-461e3c53f7dd" />
 
 <img width="1091" height="280" alt="Screenshot 2026-03-17 150303" src="https://github.com/user-attachments/assets/2e7839aa-3d2e-4c82-b425-36cdb3edd5f4" />
