@@ -9,26 +9,29 @@
 ## Quick Reference Table
 
 
-| Topic | Key Syntax | Example |
-|-------|------------|---------|
-| **Variable** | `VAR="value"` | `NAME="DevOps"` |
-| **Argument** | `$1, $2` | `./script.sh arg1` |
-| **If** | `if [ condition ]; then` | `if [ -f file ]; then` |
-| **For loop** | `for i in list; do` | `for i in 1 2 3; do` |
-| **Function** | `name() { ... }` | `greet() { echo "Hi"; }` |
-| **Grep** | `grep pattern file` | `grep -i "error" log.txt` |
-| **Awk** | `awk '{print $1}' file` | `awk -F: '{print $1}' /etc/passwd` |
-| **Sed** | `sed 's/old/new/g' file` | `sed -i 's/foo/bar/g' config.txt` |
-| **Cut** | `cut -d: -f1 file` | `cut -d, -f2 data.csv` |
-| **Logical AND** | `[ cond ] && cmd` | `[ -f file ] && echo "OK"` |
-| **Logical OR** | `[ cond ]` || `cmd` | `[ ! -d dir ]` || `echo "Dir exists"` |
-| **Logical NOT** | `[ ! cond ]` | `[ ! -f file ] && echo "Missing"` |
-| **Local var** | `local var="value"` | `local temp="/tmp/file"` |
+| Topic          | Key Syntax          | Example                           |
+|----------------|---------------------|-----------------------------------|
+| **Variable**   | `VAR="value"`       | `NAME="DevOps"`                   |
+| **Argument**   | `$1, $2`            | `./script.sh arg1`                |
+| **If**         | `if [ condition ]; then` | `if [ -f file ]; then`       |
+| **For loop**   | `for i in list; do` | `for i in 1 2 3; do`             |
+| **Function**   | `name() { ... }`    | `greet() { echo "Hi"; }`          |
+| **Grep**       | `grep pattern file` | `grep -i "error" log.txt`         |
+| **Awk**        | `awk '{print $1}' file` | `awk -F: '{print $1}' /etc/passwd` |
+| **Sed**        | `sed 's/old/new/g' file` | `sed -i 's/foo/bar/g' config.txt` |
+| **Cut**        | `cut -d: -f1 file`  | `cut -d, -f2 data.csv`            |
+| **Logical AND**| `[ cond ] && cmd`   | `[ -f file ] && echo "OK"`        |
+| **Logical OR** | `[ cond ] || cmd`   | `[ -d dir ] || mkdir -p dir`      |
+| **Logical NOT**| `[ ! cond ]`        | `[ ! -f file ] && echo "Missing"` |
+| **Local var**  | `local var="value"` | `local temp="/tmp/file"`          |
+
+
+
 
 
 ---
 
-#!/bin/bash
+
 
 ## Challenge Tasks
 
@@ -56,7 +59,9 @@ echo ${NAME}-------quoting variable<br/>
 
 
 5. Reading user input — `read`<br/>
-read -p "Enter Name : "AKASH"------Takes Akash as an input from user and stored it in variable<br/>
+
+read -p "Enter name: " NAME"  ------Takes as an input from user and stored it in variable<br/>      
+echo "$NAME" 
 
 6. Command-line arguments — `$0`, `$1`, `$#`, `$@`, `$?`<br/>
 `$0`------It is a Filename in argument eg:./devops.sh<br/>
