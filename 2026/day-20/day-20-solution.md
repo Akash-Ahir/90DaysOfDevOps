@@ -111,9 +111,7 @@ generate_report() {
         echo "Total Error Count: $ERROR_COUNT"
         echo ""
         echo "==========TOP 5 ERROR MESSAGES=========="
-        grep "ERROR" "$LOG_FILE" | \
-            awk '{$1=$2=$3=$NF=""; print}' | \
-            sort | uniq -c | sort -nr | head -5
+        grep "ERROR" "$LOG_FILE" | awk '{$1=$2=$3=$NF=""; print}' | sort | uniq -c | sort -nr | head -5
         echo ""
         echo "==========CRITICAL MESSAGES=========="
         grep -n "CRITICAL" "$LOG_FILE"
