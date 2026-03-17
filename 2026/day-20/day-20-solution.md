@@ -1,6 +1,10 @@
 # Day 20 – Bash Scripting Challenge: Log Analyzer and Report Generator
 
-## Task
+**Date**: March 7, 2026  
+**Repository**: [90DaysOfDevOps](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-20)
+
+## Task Overview
+I built a log analyzer script to automate the process of analyzing system logs and generating systematic reports a common real-world responsibility for system administrators and DevOps engineers.
 
 You are a system administrator responsible for managing a network of servers. Every day, a log file is generated on each server containing important system events and error messages. Your job is to analyze these log files, identify specific events, and generate a summary report.
 
