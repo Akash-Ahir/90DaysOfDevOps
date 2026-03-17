@@ -21,7 +21,7 @@
 | **Sed** | `sed 's/old/new/g' file` | `sed -i 's/foo/bar/g' config.txt` |
 | **Cut** | `cut -d: -f1 file` | `cut -d, -f2 data.csv` |
 | **Logical AND** | `[ cond ] && cmd` | `[ -f file ] && echo "OK"` |
-| **Logical OR** | `[ cond ]` || `cmd` | `[ ! -d dir ] || echo "Dir exists"` |
+| **Logical OR** | `[ cond ]` || `cmd` | `[ ! -d dir ]` || `echo "Dir exists"` |
 | **Logical NOT** | `[ ! cond ]` | `[ ! -f file ] && echo "Missing"` |
 | **Local var** | `local var="value"` | `local temp="/tmp/file"` |
 
