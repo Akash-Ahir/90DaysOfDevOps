@@ -1,15 +1,9 @@
 # Day 21 – Shell Scripting Cheat Sheet: Build Your Own Reference Guide
 
-## Task
+**Date**: March 17, 2026  
+**Repository**: [90DaysOfDevOps](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-21)
 
-You've spent the last several days learning Shell scripting — from basics to real-world projects. Now it's time to consolidate everything into a **personal cheat sheet** that you can use as a quick-reference guide for the rest of your DevOps journey.
-
-The best way to revise is to **teach it back**. Writing a cheat sheet forces you to organize your understanding and identify gaps.
-
----
-
-## Expected Output
-- A markdown file: `shell_scripting_cheatsheet.md`
+## Task Overview
 
 ---
 
@@ -18,22 +12,52 @@ The best way to revise is to **teach it back**. Writing a cheat sheet forces you
 ### Task 1: Basics
 Document the following with short descriptions and examples:
 1. Shebang (`#!/bin/bash`) — what it does and why it matters
-2. Running a script — `chmod +x`, `./script.sh`, `bash script.sh`
-3. Comments — single line (`#`) and inline
-4. Variables — declaring, using, and quoting (`$VAR`, `"$VAR"`, `'$VAR'`)
-5. Reading user input — `read`
-6. Command-line arguments — `$0`, `$1`, `$#`, `$@`, `$?`
+tells the system which interpreter to use `#!/bin/bash` it should be written at the top of the script
 
+2. Running a script  `chmod +x`, `./script.sh`, `bash script.sh`
+
+ `chmod +x`-----------giving execution permission 
+ `./script.sh`--------running the script with the define interpretator written in the script
+ `bash script.sh`----- executing script.sh by the Bash 
+ 
+3. Comments — single line (`#`) and inline
+
+#--this is single line comment
+ DATE_ANALYSIS=$(date +'%Y-%m-%d') #---this is inline comment
+ 
+4. Variables — declaring, using, and quoting (`$VAR`, `"$VAR"`, `'$VAR'`)
+
+NAME="AKASH"-------declaring variable
+echo $NAME---------using variable     
+echo ${NAME}-------quoting variable
+
+
+5. Reading user input — `read`
+read -p "Enter Name : "AKASH"------Takes Akash as an input from user and stored it in variable
+
+7. Command-line arguments — `$0`, `$1`, `$#`, `$@`, `$?`
+
+`$0`------It is a Filename in argument eg:./devops.sh
+`$1`------its the first argument passed by user eg: ./devops.sh akash
+`$#`------total number of arguments
+`$@`------print all arguments
+`$?`------it will catch the last command output
 ---
 
 ### Task 2: Operators and Conditionals
 Document with examples:
 1. String comparisons — `=`, `!=`, `-z`, `-n`
-2. Integer comparisons — `-eq`, `-ne`, `-lt`, `-gt`, `-le`, `-ge`
-3. File test operators — `-f`, `-d`, `-e`, `-r`, `-w`, `-x`, `-s`
-4. `if`, `elif`, `else` syntax
-5. Logical operators — `&&`, `||`, `!`
-6. Case statements — `case ... esac`
+`=`------
+`!=`------
+`-z`------
+`-n`------
+
+
+3. Integer comparisons — `-eq`, `-ne`, `-lt`, `-gt`, `-le`, `-ge`
+4. File test operators — `-f`, `-d`, `-e`, `-r`, `-w`, `-x`, `-s`
+5. `if`, `elif`, `else` syntax
+6. Logical operators — `&&`, `||`, `!`
+7. Case statements — `case ... esac`
 
 ---
 
