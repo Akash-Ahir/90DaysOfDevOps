@@ -71,11 +71,25 @@ Today marks the beginning of your Git journey. Git is the backbone of modern Dev
 ---
 
 ### Task 6: Understand the Git Workflow
-Answer these questions in your own words (add them to a `day-22-notes.md` file):
+
 1. What is the difference between `git add` and `git commit`?
+  * git add- its use to add untracked file to staged
+  * git commit- commits those staged file into a repo with a meaningful message
+
+
 2. What does the **staging area** do? Why doesn't Git just commit directly?
+
+ANSWER: The staging area lets you prepare exactly what you want to commit It gives you control so you can commit only part of your changes and avoid unnecessary files /changes.
+
 3. What information does `git log` show you?
+`git log`- it shows the commit history
+
 4. What is the `.git/` folder and what happens if you delete it?
+`.git/`- its store all the git data including commit history, configuration, Bracnches and etc. If we delete .git folder then this all data will be deleted and that directory is no longer git repository. 
+
 5. What is the difference between a **working directory**, **staging area**, and **repository**?
+`Working directory`: your actual files on disk that you edit.
+`where you prepare`: changes before committing.
+`Repository`: where Git stores .
 
 ---
