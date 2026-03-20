@@ -1,33 +1,46 @@
 ## Setup & Config
 
+show the install git version
+```
 git --version
-"show the install git version"
+```
 
+sets the global username
+```
 git config --global user.name "AKASH"
-"sets the global username"
+```
 
+sets the global user email
+```
 git config --global user.email "akashahir50@gmail.com"
-"sets the global user email"
-
+```
+shows git configuration
+```
 git config --list
-"shows git configuration"
-
+```
 
 
 ## Basic Workflow
 
+initilized a new git repo in current dir
+```
 git init
-"initilized a new git repo in current dir"
+```
 
+shows the current branch and status
+```
 git status
-"shows the current branch and status"
+```
 
+make a new commit with the commit message
+```
 git commit -m "meanning ful messsage"
-"make a new commit with the commit message"
+```
 
-git add git-commands.md
 "staged all modified file"
-
+```
+git add git-commands.md
+```
 git log
 "show commit history"
 
