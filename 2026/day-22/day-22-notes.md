@@ -43,6 +43,8 @@ Today marks the beginning of your Git journey. Git is the backbone of modern Dev
 3. For each command, write:
    - What it does (1 line)
    - An example of how to use it
+  
+### [git-commands.md]([https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-20/script/log_analyzer.sh](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-22/git-commands.md))
 
 ---
 
@@ -79,7 +81,7 @@ Today marks the beginning of your Git journey. Git is the backbone of modern Dev
 
 2. What does the **staging area** do? Why doesn't Git just commit directly?
 
-ANSWER: The staging area lets you prepare exactly what you want to commit It gives you control so you can commit only part of your changes and avoid unnecessary files /changes.
+      ANSWER: The staging area lets you prepare exactly what you want to commit It gives you control so you can commit only part of your changes and avoid unnecessary files /changes.
 
 3. What information does `git log` show you?
 `git log`- it shows the commit history
