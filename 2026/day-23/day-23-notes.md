@@ -3,13 +3,13 @@
 **Repository**: [90DaysOfDevOps](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-23)
 
 ## Task Overview
-
+Today, i moved beyond basic Git commands and started exploring how Git is used in real-world development workflows. The focus was on understanding branching, working with remote repositories, and collaborating using GitHub.Instead of working on a single codebase, I learned how to safely experiment with new features using branches without affecting the main project.
 
 ## Challenge Tasks
 
-### Task 1: Understanding Branches
+## Task 1: Understanding Branches
 
-1. What is a branch in Git?
+ 1. What is a branch in Git?
 
       ANSWER: A branch is a parallel workspace. You can create a copy of the project to test the idea. If it fails, you delete the branch. The main project stay safe.
 
@@ -34,7 +34,7 @@
 
 ---
 
-### Task 2: Branching Commands — Hands-On
+## Task 2: Branching Commands — Hands-On
 In your `devops-git-practice` repo, perform the following:
 1. List all branches in your repo
 2. Create a new branch called `feature-1`
@@ -57,7 +57,7 @@ In your `devops-git-practice` repo, perform the following:
 
 ---
 
-### Task 3: Push to GitHub
+## Task 3: Push to GitHub
 1. Create a **new repository** on GitHub (do NOT initialize it with a README)
 2. Connect your local `devops-git-practice` repo to the GitHub remote
 3. Push your `main` branch to GitHub
@@ -77,7 +77,7 @@ In your `devops-git-practice` repo, perform the following:
 
 ---
 
-### Task 4: Pull from GitHub
+## Task 4: Pull from GitHub
 1. Make a change to a file **directly on GitHub** (use the GitHub editor)
 2. Pull that change to your local repo
 3. Answer in your notes: What is the difference between `git fetch` and `git pull`?<br/>
@@ -91,7 +91,7 @@ In your `devops-git-practice` repo, perform the following:
 
 ---
 
-### Task 5: Clone vs Fork
+## Task 5: Clone vs Fork
 1. **Clone** any public repository from GitHub to your local machine<br/>
 2. **Fork** the same repository on GitHub, then clone your fork<br/>
 3. Answer in your notes:<br/>
