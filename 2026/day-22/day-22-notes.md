@@ -44,7 +44,7 @@ Today marks the beginning of your Git journey. Git is the backbone of modern Dev
    - What it does (1 line)
    - An example of how to use it
   
-### [git-commands.md](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-20/script/log_analyzer.sh](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-22/git-commands.md)
+### [git-commands.md](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-22/git-commands.md)
 
 ---
 
