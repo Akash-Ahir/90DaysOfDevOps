@@ -45,5 +45,5 @@ git add git-commands.md
 show commit history
 ```
 git log
-"show commit history"
+
 ```
