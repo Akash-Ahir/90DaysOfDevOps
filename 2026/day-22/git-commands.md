@@ -37,10 +37,13 @@ make a new commit with the commit message
 git commit -m "meanning ful messsage"
 ```
 
-"staged all modified file"
+staged all modified file
 ```
 git add git-commands.md
 ```
+
+show commit history
+```
 git log
 "show commit history"
-
+```
