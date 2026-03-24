@@ -89,7 +89,7 @@ Research the following branching strategies and document each in your notes with
 - When/where it's used
 - Pros and cons
 
-1.### **GitFlow** — develop, feature, release, hotfix branches<br/>
+### 1. **GitFlow** — develop, feature, release, hotfix branches<br/>
    `develop` - The develop branch is for new feature and bug fix its contain the pre production code.<br/>
    `feature` - It's Branches off develop to introduce new features after completion merges back into develop.<br/>
    `release` - Created from develop when preparing for a production deployment. It allows final QA, bug fixes, and documentation, then merges into both main and develop.<br/>
@@ -102,7 +102,7 @@ Research the following branching strategies and document each in your notes with
 ### cons - Due to too many branches it is complex to manage<br/>
 ### When/where it's used - used for lar corporates teams with large project<br/>
    
-3. ### **GitHub Flow** — simple, single main branch + feature branches<br/>
+### 3. **GitHub Flow** — simple, single main branch + feature branches<br/>
    `single main branch` - A main branch containing only production-ready code that is immediately deployable.<br/>
    `feature branches` -  - Developers create new branches directly from main to work on specific features, fixes, or experiments, isolating work to prevent breaking production. <br/>
     <img width="729" height="547" alt="image" src="https://github.com/user-attachments/assets/f8e6dede-ee1a-4585-8265-9381d24357f5" /><br/>
@@ -113,7 +113,7 @@ Research the following branching strategies and document each in your notes with
   ### cons - Not ideal for complex versioning<br/>
   ### When/where it's used - Web apps, startups, continuous deployment environments.<br/>
    
-5. ### **Trunk-Based Development** — everyone commits to main, short-lived branches<br/>
+### 5.  **Trunk-Based Development** — everyone commits to main, short-lived branches<br/>
    `main` - A main branch containing only production-ready code<br/>
    `short-lived branches` - Branches are created for specific, small tasks, merged back to the main branch within a few hours or days, and then deleted.<br/>
 
@@ -125,7 +125,7 @@ Research the following branching strategies and document each in your notes with
   ### cons - Risky without good practices<br/>
   ### When/where it's used - High-performance teams, DevOps environments.<br/>
    
-7. ### Answer:
+### 7.  Answer:
    - Which strategy would you use for a startup shipping fast? = GitHub Flow or Trunk-Based Development<br/>
    - Which strategy would you use for a large team with scheduled releases? = GitFlow<br/>
    - Which one does your favorite open-source project use? = GitHub Flow<br/>
