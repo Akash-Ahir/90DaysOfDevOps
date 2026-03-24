@@ -3,7 +3,7 @@
 **Repository**: [90DaysOfDevOps](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-25)
 
 ## Task Overview
-
+Until now, undoing changes felt simple but today I realized there’s a right way and a risky way to do it. I understood the difference between git reset and git revert — they may seem similar at first, but they behave very differently. I also explored branching strategies and learned when to use each one in real scenarios.
 ---
 
 ## Challenge Tasks
