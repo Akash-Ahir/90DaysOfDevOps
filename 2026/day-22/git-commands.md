@@ -47,3 +47,81 @@ show commit history
 git log
 
 ```
+display the differences between two versions
+```
+git diff
+```
+
+## Branching 
+to list the branches
+```
+git branch
+```
+To switch and create a new branch
+```
+git checkout -b
+```
+
+to switch between two branches
+```
+git switch
+```
+
+## Remote
+
+to push changes to remote
+```
+git push
+```
+to pull changes from remote
+```
+pull
+```
+to fetch changes of remote
+```
+fetch
+```
+to clone a repository from remote
+```
+clone
+```
+to fork a repository from another repo
+```
+fork
+```
+
+
+## OTHER
+
+to merge commit to other branch
+```
+git merge
+```
+to maintain a linear commit history
+```
+git rebase
+```
+
+undo commit
+```
+git revert
+```
+remove commit and changes
+```
+git reset
+```
+
+to save work in progress and fix the hot fix
+```
+git stash
+```
+to resume the work in progress
+```
+git stash pop
+```
+to pick the specific commit 
+```
+git cherry-pick
+```
+
+
