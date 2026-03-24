@@ -1,4 +1,4 @@
-# Day 22 – Introduction to Git: Your First Repository
+# Day 23 – Git Branching & Working with GitHub
 **Date**: March 19, 2026  
 **Repository**: [90DaysOfDevOps](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-23)
 
