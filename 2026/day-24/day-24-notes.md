@@ -4,7 +4,11 @@
 
 
 ## Task Overview
+
+
 Today I explored advanced Git concepts and how they are used in real workflows. I learned how to combine changes using merge and rebase, manage unfinished work with stash, and apply specific commits using cherry-pick. This helped me understand how to handle code history and work more efficiently in real projects.
+
+
 ---
 
 ## Challenge Tasks
