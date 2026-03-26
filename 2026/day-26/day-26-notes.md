@@ -4,6 +4,7 @@
 
 ## Task Overview
 
+Learned about github cli and how to use the GitHub CLI (gh) to manage GitHub directly from the terminal. I practiced creating repos, handling issues and pull requests, and exploring workflows—all without using the browser. This made development faster and showed how tasks can be automated efficiently.
 
 
 ---
