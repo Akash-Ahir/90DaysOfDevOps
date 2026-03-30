@@ -13,9 +13,9 @@
 Research and write short notes on:
 - What is a container and why do we need them?
   ```
-  Container is a light weight box that has everything your app neeeds to run,
-  but shares the heavy system parts with the computerit runs on.
-  Container is like avirtulization when they run on the docker engine.
+  Container is a light weight box that has everything your app neeed to run,
+  but shares the heavy system parts with the computer it runs on.
+  Container is like a virtulization when they run on the docker engine.
   ```
   
 - Containers vs Virtual Machines — what's the real difference?
@@ -29,12 +29,12 @@ Research and write short notes on:
 | Weight / Size    | Lightweight and compact                      | Heavier and resource-intensive            |
 
 - What is the Docker architecture? (daemon, client, images, containers, registry)<br/>
-`daemon` -It is responsible for running container and managing docker services its ri=un on the host os.<br/>
-`client` - Docker user can intract with docker daemon through the docker client. Docker client uses commands and rest api to communicate with the daemon<br/>
-`images` - Docker image is blueprint of the container it has all the necessary coomand to run app<br/>
+`daemon` -It is responsible for running container and managing docker services its run on the host os.<br/>
+`client` - Docker user can interact with docker daemon through the docker client. Docker client uses commands and rest api to communicate with the daemon<br/>
+`images` - Docker image is blueprint of the container it has all the necessary commands to run app<br/>
 `containers` - Container is a light weight box that has everything your app neeeds to run, but shares the heavy system parts with the computerit runs on.Container is like avirtulization when they run on the docker engine.<br/>
 `registry` - docker registry is used to store and manage the docker images.<br/>
-    `Private` - it is used to share images withing enterprises<br/>
+    `Private` - it is used to share images within enterprises<br/>
     `Public` -  public registry is also called dockerhub<br/>
 
 Draw or describe the Docker architecture in your own words.<br/>
