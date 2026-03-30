@@ -4,6 +4,7 @@
 
 ## Task Overview
 
+On Day 29, I explored the fundamentals of Docker and containerization by understanding core concepts and performing hands on tasks.
 
 ---
 
