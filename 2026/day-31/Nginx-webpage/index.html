@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akash | DevOps Engineer Portfolio</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #121a2b;
+      --text: #e6edf3;
+      --muted: #9fb0c3;
+      --accent: #38bdf8;
+      --accent-2: #22c55e;
+      --border: #1f2a44;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, #13203a 0%, transparent 60%), var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      padding: 56px 20px 32px; text-align: center; border-bottom: 1px solid var(--border);
+    }
+    .name { font-size: 2.6rem; margin: 0; letter-spacing: .5px; }
+    .tag { color: var(--accent); font-weight: 600; }
+    .sub { color: var(--muted); max-width: 800px; margin: 10px auto 0; }
+    nav {
+      position: sticky; top: 0; backdrop-filter: blur(8px);
+      background: rgba(11,18,32,.7); border-bottom: 1px solid var(--border);
+      display: flex; justify-content: center; gap: 18px; padding: 10px;
+    }
+    nav a { color: var(--muted); text-decoration: none; font-size: .95rem; }
+    nav a:hover { color: var(--accent); }
+    section { max-width: 1100px; margin: auto; padding: 36px 20px; }
+    h2 { margin: 0 0 16px; }
+    .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent), var(--card);
+      border: 1px solid var(--border); border-radius: 16px; padding: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .badge { display: inline-block; border: 1px solid var(--border); padding: 6px 10px; border-radius: 999px; margin: 4px; color: var(--muted); }
+    .badge.accent { border-color: rgba(56,189,248,.5); color: var(--accent); }
+    .kpi { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+    .kpi div { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px; text-align: center; }
+    .kpi strong { font-size: 1.4rem; color: var(--accent-2); }
+    .list { padding-left: 18px; }
+    .timeline { border-left: 2px dashed var(--border); margin-left: 10px; }
+    .tl-item { position: relative; padding: 10px 0 10px 16px; }
+    .tl-item::before { content: ""; position: absolute; left: -7px; top: 16px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+    .proj h3 { margin: 0 0 6px; }
+    .proj a { color: var(--accent); text-decoration: none; }
+    .cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; cursor: pointer; text-decoration: none;
+      color: var(--text); background: #0e1629;
+    }
+    .btn.primary { background: var(--accent); color: #001018; border-color: transparent; }
+    footer { text-align: center; padding: 26px; color: var(--muted); border-top: 1px solid var(--border); }
+    small { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="name">Akash</h1>
+    <div class="tag">DevOps Engineer (In Progress) • #90DaysOfDevOps</div>
+    <p class="sub">Hands-on learner building real DevOps skills: containers, CI/CD, cloud basics, and system design. Focused on reliability, automation, and clean deployments.</p>
+    <div class="cta" style="justify-content:center; margin-top:16px;">
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn" href="#contact">Contact Me</a>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="card">
+      <p>I’m building a strong DevOps foundation by practicing daily. I focus on containerization, Linux fundamentals, Git workflows, and CI/CD pipelines. I enjoy debugging, automating repetitive tasks, and optimizing systems for performance and cost.</p>
+      <div class="kpi">
+        <div><strong>30+</strong><br><small>Days of Consistent Learning</small></div>
+        <div><strong>10+</strong><br><small>Hands-on Labs</small></div>
+        <div><strong>5+</strong><br><small>Mini Projects</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Core Skills</h2>
+    <div class="card">
+      <div>
+        <span class="badge accent">Linux</span>
+        <span class="badge accent">Git & GitHub</span>
+        <span class="badge accent">Docker</span>
+        <span class="badge">Networking Basics</span>
+        <span class="badge">Bash Scripting</span>
+        <span class="badge">CI/CD (GitHub Actions)</span>
+        <span class="badge">Nginx</span>
+        <span class="badge">Cloud Basics (AWS)</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card proj">
+        <h3>90 Days of DevOps</h3>
+        <p>Daily challenges covering Docker, Linux, Git, and CI/CD with notes and commands.</p>
+        <ul class="list">
+          <li>Built and managed containers (nginx, ubuntu, alpine)</li>
+          <li>Explored image layers & lifecycle</li>
+          <li>Hands-on debugging with logs/exec/inspect</li>
+        </ul>
+        <a href="#">GitHub Repo →</a>
+      </div>
+      <div class="card proj">
+        <h3>Nginx Docker Deployment</h3>
+        <p>Containerized a static site and exposed via port mapping.</p>
+        <ul class="list">
+          <li>Docker run (detached), volumes, logs</li>
+          <li>Basic reverse proxy understanding</li>
+        </ul>
+        <a href="#">GitHub Repo →</a>
+      </div>
+      <div class="card proj">
+        <h3>CI Pipeline (Starter)</h3>
+        <p>Automated build and checks using GitHub Actions.</p>
+        <ul class="list">
+          <li>Triggers on push/PR</li>
+          <li>Install dependencies, run scripts</li>
+        </ul>
+        <a href="#">GitHub Repo →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+      <div class="timeline">
+        <div class="tl-item">
+          <strong>DevOps Learner</strong> — Self
+          <div><small>2026 — Present</small></div>
+          <ul class="list">
+            <li>Practicing container lifecycle, image optimization, and cleanup strategies</li>
+            <li>Writing scripts for automation and repeatable setups</li>
+          </ul>
+        </div>
+        <div class="tl-item">
+          <strong>Linux & Git Fundamentals</strong>
+          <div><small>2026</small></div>
+          <ul class="list">
+            <li>File systems, permissions, networking basics</li>
+            <li>Branching, PR workflows, and collaboration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="roadmap">
+    <h2>Roadmap</h2>
+    <div class="grid">
+      <div class="card"><strong>Phase 1</strong><br><small>Linux, Networking</small></div>
+      <div class="card"><strong>Phase 2</strong><br><small>Git & GitHub</small></div>
+      <div class="card"><strong>Phase 3</strong><br><small>Docker (Images, Lifecycle)</small></div>
+      <div class="card"><strong>Phase 4</strong><br><small>Kubernetes Basics</small></div>
+      <div class="card"><strong>Phase 5</strong><br><small>CI/CD Pipelines</small></div>
+      <div class="card"><strong>Phase 6</strong><br><small>Cloud & Monitoring</small></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: your@email.com</p>
+      <p>LinkedIn: your-link</p>
+      <p>GitHub: your-github</p>
+      <small>Tip: replace placeholders with your real links.</small>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Akash • Built for real-world DevOps roles
+  </footer>
+</body>
+</html>
