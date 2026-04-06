@@ -118,8 +118,7 @@ Build and run it. Understand what each line does.
  
  #### Docker builds images layer by layer and stores each step in cache. If I change an early layer, Docker rebuilds that layer and all the layers after it. That is why Dockerfile order matters. I should keep stable steps at the top and frequently changing steps like `COPY . .` at the end so rebuilds become faster
   
-<img width="1127" height="572" alt="task 6 1 " src="https://github.com/user-attachments/assets/72c86d58-43ce-4265-93b3-2af10021b401" />
-<img width="745" height="631" alt="task 6 2" src="https://github.com/user-attachments/assets/ecfc537b-3b28-4916-b8c6-c76dc99495dc" />
+
 
 
 
