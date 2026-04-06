@@ -45,7 +45,7 @@ Create a new Dockerfile that uses **all** of these instructions:
 - `CMD` — default command
 
 Build and run it. Understand what each line does.
-### [Dockerfile](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-31/pyhton-fastapi-webpage/Dockerfile)<br/>
+### [Dockerfile](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-31/pyhton-fastapi/Dockerfile)<br/>
 
 <img width="1752" height="363" alt="task 2 output" src="https://github.com/user-attachments/assets/4c7f31ef-8fdf-410e-9a76-9b010713cff4" />
 
