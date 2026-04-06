@@ -3,7 +3,7 @@
 **Repository**: [90DaysOfDevOps](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-31)
 ## Task Overview
 
-I started by creating my first Dockerimages with Dockerfile. I learned how different instructions work and how to create custom images instead of just using pre-built ones. Get to know about CMD vs ENTRYPOINT, built a simple Nginx webpage, and understood how .dockerignore and caching improve build performance.
+#### I started by creating my first Docker image using a Dockerfile. I learned how different instructions work and how to build custom images instead of relying only on pre-built ones. I also understood the difference between CMD and ENTRYPOINT, built a simple Nginx webpage, and explored how .dockerignore and caching help improve build performance.
 
 ---
 
