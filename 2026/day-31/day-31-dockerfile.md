@@ -70,8 +70,8 @@ Build and run it. Understand what each line does.
 
 
 
-### [Dockerfile---CMD](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-31/pyhton-fastapi-webpage/Dockerfile)<br/>
-### [Dockerfile---ENTRYPOINT](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-31/pyhton-fastapi-webpage/Dockerfile)<br/>
+### [Dockerfile---CMD](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-31/my-first-image/Dockerfile---CMD)<br/>
+### [Dockerfile---ENTRYPOINT](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-31/my-first-image/Dockerfile---ENTRYPOINT)<br/>
 
 
 <img width="1078" height="88" alt="task 3 1" src="https://github.com/user-attachments/assets/316c13ee-0fdf-4df6-a9c7-f3b450d7e432" />
