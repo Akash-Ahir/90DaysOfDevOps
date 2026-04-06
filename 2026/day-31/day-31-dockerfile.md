@@ -88,7 +88,7 @@ Build and run it. Understand what each line does.
    - Copies your `index.html` to the Nginx web directory
 3. Build and tag it `my-website:v1`
 4. Run it with port mapping and access it in your browser
-### [Dockerfile---ENTRYPOINT](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-31/pyhton-fastapi-webpage/Dockerfile)<br/>
+### [Dockerfile](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-31/pyhton-fastapi-webpage/Dockerfile)<br/>
 
 
 
