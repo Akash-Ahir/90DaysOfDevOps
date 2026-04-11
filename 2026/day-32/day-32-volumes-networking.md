@@ -108,21 +108,29 @@ named volume- create a seperate volume space and mount/attach to the database/co
   ```
   docker network create my-app-net
   ```
+  <img width="837" height="257" alt="task 5 1" src="https://github.com/user-attachments/assets/3e31f8b7-69dc-405a-a021-a7ce27ea9287" />
+
 
 #### 2. Run two containers on `my-app-net`
   ```
   docker run -itd --name ubuntucontainer-1 --network my-app-net ubuntu
   docker run -itd --name ubuntucontainer-2 --network my-app-net ubuntu
   ```
+  <img width="1233" height="332" alt="task 5 2" src="https://github.com/user-attachments/assets/336793aa-e3aa-4cc2-8995-835bb95a0f90" />
 
-#### 3. Can they ping each other by **name** now?
+
+#### 3. Can they ping each other by **name** now?-yes
   ```
   docker exec -it ubuntucontainer-1 bash
   
   ```
+
   ```
   ping ubuntucontainer-2
   ```
+  <img width="1060" height="213" alt="task 5 3" src="https://github.com/user-attachments/assets/ff26a3d7-55ec-41b4-b69d-c0311b1a2ae8" />
+
+  
 #### 4. Write in your notes: Why does custom networking allow name-based communication but the default bridge doesn't?
 
 ---
@@ -132,17 +140,26 @@ named volume- create a seperate volume space and mount/attach to the database/co
   ```
   docker network create custom-network
   ```
+  <img width="827" height="292" alt="task 6 1" src="https://github.com/user-attachments/assets/b18bd9fa-9940-4700-b895-4f63b3878b6f" />
 
+  
 #### 2. Run a **database container** (MySQL/Postgres) on that network with a volume for data
   ```
   docker run -d --name mysql -v mysql-data:/var/lib/MySQL -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 --network custom-network mysql
   ```
+  <img width="1795" height="177" alt="task 6 2" src="https://github.com/user-attachments/assets/738b7c02-36d0-46b0-8b23-a7e42c19a194" />
+
 #### 3. Run an **app container** (use any image) on the same network
   ```
   docker run -d --name application-cont -e MYSQL_HOST=mysql -e MYSQL_USER=root -e MYSQL_PASSWORD=root -e MYSQL_DB=dev -p 5000:5000 --network custom-network flask-app:latest
   ```
-#### 4. Verify the app container can reach the database by container name
-  ```
+  <img width="1713" height="358" alt="task 6 3" src="https://github.com/user-attachments/assets/5e30eae5-5b45-4eda-804c-3ab58202662d" />
+
+#### 4. Verify the app container can reach the database by container name -yes
 
   ```
+  ping mysql
+  ```
+  <img width="1713" height="281" alt="task 6 4" src="https://github.com/user-attachments/assets/25635451-eac8-4485-b752-80a7345b13f4" />
+
 ---
