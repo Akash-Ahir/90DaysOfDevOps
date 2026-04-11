@@ -4,7 +4,7 @@
 
 ## Task Overview
 
-How Docker handles data persistence and container communication. I experimented with volumes to prevent data loss and used custom networks to enable seamless communication between containers using names instead of IP addresses.
+This task shows how to manage persistent data and container communication in Docker. Volumes ensure data is not lost when containers are removed, and custom networks allow seamless communication between containers using service names.
 
 ---
 
