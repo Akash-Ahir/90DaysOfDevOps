@@ -4,6 +4,8 @@
 
 ## Task overview
 
+Docker Compose simplifies running multi-container applications by using a single configuration file instead of managing containers individually. This task includes setting up Nginx, connecting WordPress with MySQL for communication and data persistence, and using commands and environment variables to manage and configure services efficiently.
+
 ---
 
 ## Challenge Tasks
