@@ -4,7 +4,6 @@
 
 ## Task overview
 
-### [Dockerfile](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-31/my-first-image/Dockerfile)<br/>
 ---
 
 ## Challenge Tasks
@@ -30,6 +29,7 @@
   ```
   vim docker-compose.yml
   ```
+### [Docker-compose.yml](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-33/compose-basics/docker-compose.yml)<br/>
 
 
 #### 3. Start it with `docker compose up`
@@ -58,6 +58,7 @@
 Write a `docker-compose.yml` that runs:
 - A **WordPress** container
 - A **MySQL** container
+### [Docker-compose.yml](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-33/TWO_CONTAINER_SETUP/docker-compose.yml)<br/>
 
 They should:
 - Be on the same network (Compose does this automatically)
@@ -143,6 +144,8 @@ Practice and document these:
   ```
   docker compose exec wordpress env | grep WORDPRESS
   ```
+  ### [.env](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-33/TWO_CONTAINER_SETUP/.env)<br/>
+
   <img width="1123" height="288" alt="task 5" src="https://github.com/user-attachments/assets/e2bd8d51-c94f-40c2-a9f6-6a19afa9f9ac" />
 
 
