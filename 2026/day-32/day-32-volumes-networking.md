@@ -4,6 +4,7 @@
 
 ## Task Overview
 
+How Docker handles data persistence and container communication. I experimented with volumes to prevent data loss and used custom networks to enable seamless communication between containers using names instead of IP addresses.
 
 ---
 
@@ -18,7 +19,7 @@
 
 #### 2. Create some data inside it (a table, a few rows — anything)
   ```
-  CREATED DATABASE imp_data;
+  CREATE DATABASE imp_data;
 
   ```
 <img width="456" height="241" alt="task 1 2" src="https://github.com/user-attachments/assets/4060ba83-07fa-4708-b0bc-a77aedbf01ed" />
