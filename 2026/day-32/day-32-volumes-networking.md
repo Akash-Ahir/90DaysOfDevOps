@@ -40,13 +40,13 @@ Write what happened and why.
 ## Task 2: Named Volumes
 #### 1. Create a named volume
   ```
-  docker volume create mysql-data-prd
+  docker volume create mysql-data
   ```
 <img width="710" height="113" alt="task 2 1" src="https://github.com/user-attachments/assets/b962eab5-7dfd-4e53-a31d-0d15a88e0909" />
 
 #### 2. Run the same database container, but this time **attach the volume** to it
   ```
-  docker run -d -v  mysql-data-prd:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root mysql
+  docker run -d -v  mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root mysql
   ```
 
 #### 3. Add some data, stop and remove the container
