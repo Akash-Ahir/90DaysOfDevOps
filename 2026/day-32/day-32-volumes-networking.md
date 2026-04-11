@@ -18,7 +18,7 @@
 
 #### 2. Create some data inside it (a table, a few rows — anything)
   ```
-  create databases imp_data
+  CREATED DATABASE imp_data;
 
   ```
 <img width="456" height="241" alt="task 1 2" src="https://github.com/user-attachments/assets/4060ba83-07fa-4708-b0bc-a77aedbf01ed" />
@@ -40,13 +40,13 @@ Write what happened and why.
 ## Task 2: Named Volumes
 #### 1. Create a named volume
   ```
-  docker volume crreate mysql-data-prd
+  docker volume create mysql-data-prd
   ```
 <img width="710" height="113" alt="task 2 1" src="https://github.com/user-attachments/assets/b962eab5-7dfd-4e53-a31d-0d15a88e0909" />
 
 #### 2. Run the same database container, but this time **attach the volume** to it
   ```
-  docker run -d -v  mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root mysql
+  docker run -d -v  mysql-data-prd:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root mysql
   ```
 
 #### 3. Add some data, stop and remove the container
@@ -132,6 +132,7 @@ named volume- create a seperate volume space and mount/attach to the database/co
 
   
 #### 4. Write in your notes: Why does custom networking allow name-based communication but the default bridge doesn't?
+      -Custom networks have built-in Docker DNS that automatically resolves container names to IPs
 
 ---
 
@@ -145,7 +146,7 @@ named volume- create a seperate volume space and mount/attach to the database/co
   
 #### 2. Run a **database container** (MySQL/Postgres) on that network with a volume for data
   ```
-  docker run -d --name mysql -v mysql-data:/var/lib/MySQL -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 --network custom-network mysql
+  docker run -d --name mysql -v mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 --network custom-network mysql
   ```
   <img width="1795" height="177" alt="task 6 2" src="https://github.com/user-attachments/assets/738b7c02-36d0-46b0-8b23-a7e42c19a194" />
 
