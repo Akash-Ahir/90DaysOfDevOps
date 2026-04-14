@@ -1,0 +1,74 @@
+services:
+  web:
+    build: .
+    image: webapp-frontend
+    container_name: WEBAPP
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: appdb
+      DB_USER: appuser
+      DB_PASSWORD_FILE: /run/secrets/db_password
+      REDIS_HOST: cache
+      REDIS_PORT: 6379
+    depends_on:
+      db:
+        condition: service_healthy
+      cache:
+        condition: service_started
+    ports:
+      - "5000:5000"
+    networks:
+      - frontend-network
+      - backend-network
+    labels:
+      description: "Frontend web app connected to Postgres and Redis"
+    secrets:
+      - db_password
+
+  db:
+    image: postgres:16-alpine
+    container_name: webapp-database
+    restart: always
+    environment:
+      POSTGRES_DB: appdb
+      POSTGRES_USER: appuser
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U appuser -d appdb"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 5s
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - backend-network
+    labels:
+      description: "Persistent PostgreSQL database"
+    secrets:
+      - db_password
+
+  cache:
+    image: redis:7-alpine
+    container_name: webapp-redis
+    restart: on-failure
+    ports:
+      - "6379:6379"
+    networks:
+      - backend-network
+    labels:
+      description: "Redis cache for visit counter"
+
+volumes:
+  postgres_data:
+
+networks:
+  frontend-network:
+    driver: bridge
+  backend-network:
+    driver: bridge
+
+secrets:
+  db_password:
+    file: ./secrets/db_password.txt
