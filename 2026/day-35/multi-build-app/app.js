@@ -237,7 +237,7 @@ const html = `
     </div>
 
     <div class="footer">
-      Created for your Day 35 DevOps task • Node.js + Docker + Creativity
+      Created for your  • Node.js + Docker 
     </div>
   </div>
 </body>
