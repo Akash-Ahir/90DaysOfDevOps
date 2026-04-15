@@ -3,7 +3,7 @@
 **Repository**: [90DaysOfDevOps](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-35)
 
 ## Task Overview
-
+This task focuses on optimizing Docker images using multi-stage builds and pushing them to Docker Hub. It includes comparing image sizes, improving efficiency with best practices, and understanding image versioning and distribution.
 
 ---
 
@@ -18,7 +18,7 @@
 
 ### [Dockerfile (Single-Stage)](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-35/multi-build-app/Dockerfile.singlebuild)<br/>
 
-   #### Note down the size — you'll compare it later. <br/>
+   #### Note down the size — it will be compared later. <br/>
 
 
 <img width="841" height="58" alt="task 1 1" src="https://github.com/user-attachments/assets/18bc53f1-fab3-422e-a3db-f6e118fef3a5" /><br/>
@@ -43,7 +43,7 @@
 
 
 #### Write in your notes: Why is the multi-stage image so much smaller?
-   -
+   - It removes build dependencies and keeps only the final compiled artifact, reducing unnecessary layers and image size.
 
 ---
 
@@ -111,7 +111,7 @@
 #### 3. Combine `RUN` commands to **reduce layers**
 #### 4. Use **specific tags** for base images (not `latest`)
 
-  ### [Dockerfile (Users & Group)](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-35/multi-build-app/Dockerfile.multibuild[user-&-group])
+  ### [Dockerfile (Users & Group)](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-35/multi-build-app/Dockerfile.multibuild-user-and-group)
 
 
    <img width="876" height="102" alt="task 5 1" src="https://github.com/user-attachments/assets/287b1eb7-8710-4d85-8a9d-a382bd4bab59" />
