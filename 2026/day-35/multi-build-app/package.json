@@ -1,7 +1,7 @@
 {
-  "name": "day-35-vibrant-demo",
+  "name": "day-35-demo",
   "version": "1.0.0",
-  "description": "Creative Node.js app for Docker multi-stage build demo",
+  "description": " Node.js app for Docker multi-stage build demo",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
