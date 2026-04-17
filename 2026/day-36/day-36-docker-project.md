@@ -51,6 +51,10 @@ Containerizing a complete AI-Bank Application using Docker. It covers writing an
 #### 5. **Environment variables** for configuration (use `.env` file)
 #### 6. **Healthchecks** on the database
 
+
+### [docker-compose](https://github.com/akashahir50/90DaysOfDevOps/blob/master/2026/day-36/AI-BankApp/docker-compose.yml)<br/>
+
+
 <img width="1261" height="675" alt="task 3" src="https://github.com/user-attachments/assets/8ce68d52-5a29-4601-9963-a6753ce7cea8" /><br/>
 
 
