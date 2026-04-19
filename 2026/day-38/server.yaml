@@ -1,0 +1,16 @@
+---
+server:
+  name: prod-webserver
+  ip: 44.223.4.182
+  port: 8080
+database:
+  host: localhost
+  name: app_production
+  credentials:
+    user: dbadmin
+    password: securepass123
+startup_script_block: |
+  echo "Starting app..." 
+  echo "Server ready on port 8080" 
+startup_script_fold: |
+  echo "Starting app..." echo "Server ready on port 8080"
