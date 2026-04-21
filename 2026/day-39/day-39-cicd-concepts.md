@@ -3,11 +3,8 @@
 **Repository**: [90DaysOfDevOps](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-39)
 
 
-## Task
-Before writing a single pipeline, understand **why CI/CD exists** and what it actually does.
-
-Today is a research and diagram day — no pipelines yet. Get the concepts right first.
-
+## Task Overview
+Understanding why CI/CD exists and how it helps teams deliver software safely and consistently. Instead of writing pipelines right away, the goal is to first understand the concepts, the problems CI/CD solves, and how a real workflow looks in practice.
 
 ---
 
