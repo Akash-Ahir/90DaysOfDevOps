@@ -57,11 +57,31 @@ Write one real-world example for each.
 ### Task 3: Pipeline Anatomy
 A pipeline has these parts — write what each one does:
 - **Trigger** — what starts the pipeline
+   This is what start the pipeline 
+   •  Push- trigger when someone pushes commit to a repository branch or tag
+   •  Pull Request- Trigger when a PR is opened
+   •  Workflow_dispatch- Allows you to manually trigger a workflow through the github ui
+   •  schedual- Trigger at spevcific times using cron syntax
+  
 - **Stage** — a logical phase (build, test, deploy)
-- **Job** — a unit of work inside a stage
-- **Step** — a single command or action inside a job
-- **Runner** — the machine that executes the job
-- **Artifact** — output produced by a job
+  •  It`s a Grouped phases like "build", "test", "deploy" run sequentially or parallel.
+  
+- **Job**
+  •  a unit of work inside a stage
+  •  it is a set of one or more steps that execute on a same runner.
+  
+- **Step**
+  •  a single command or action inside a job
+  •  it is a individual task inside the jobs execute sequentially on the same runner
+  
+- **Runner**
+  •  The machine that executes the job
+  •  every job need a runner 
+     
+- **Artifact**
+  •  output produced by a job
+  •  Job outputs saved for later like Docker image tar or test reports.
+
 
 ---
 
