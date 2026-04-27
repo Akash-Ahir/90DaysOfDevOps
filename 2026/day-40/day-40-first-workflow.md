@@ -100,7 +100,7 @@ Push again — watch the new run.
 2. Push and observe what happens in the Actions tab
 3. Fix it and push again
 
-### [Workflow]((https://github.com/Akash-Ahir/90DaysOfDevOps/2026/day-40/.github/workflow/hello.yml)<br/>
+### [Workflow](https://github.com/Akash-Ahir/2026/day-40/.github/workflow/hello.yml)<br/>
 
 
 <img width="1485" height="728" alt="5 1" src="https://github.com/user-attachments/assets/04a99b30-a966-402a-8862-5a909d1004b8" />
