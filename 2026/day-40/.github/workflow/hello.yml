@@ -1,0 +1,27 @@
+name: Hello
+on: 
+ push:
+jobs: 
+ greet:
+   runs-on: ubuntu-latest
+   steps:
+       - name: Check out repository
+         uses: actions/checkout@v4
+   
+       - name: say hello to user
+         run: echo "Hello Akash..."
+
+       - name: print current date
+         run: date
+
+       - name: branch name
+         run: echo "Branch name is ${{ github.ref_name }}"
+
+       - name: listing repos file
+         run: ls -la
+
+       - name: Print runner operating system
+         run: echo "Runner OS is $RUNNER_OS"
+           
+       - name: fixed the workflow
+         run: exit 0    
