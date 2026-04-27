@@ -51,13 +51,13 @@ Push it. Go to the **Actions** tab on GitHub and watch it run.
 
 ## Task 3: Understand the Anatomy
 Look at your workflow file and write in your notes what each key does:
-- `on:`
-- `jobs:`
-- `runs-on:`
-- `steps:`
-- `uses:`
-- `run:`
-- `name:` (on a step)
+- `on: Trigger when will workflow work`
+- `jobs: The task to perform `
+- `runs-on: The designated runner for the jobs`
+- `steps: The sequence of command and action `
+- `uses: calls a ready-made action`
+- `run: executes a shell command on the runner`
+- `name: This is the name of the workflow`
 
 ---
 
@@ -100,6 +100,9 @@ Push again — watch the new run.
 2. Push and observe what happens in the Actions tab
 3. Fix it and push again
 
+### [Workflow]((https://github.com/Akash-Ahir/90DaysOfDevOps/2026/day-40/.github/workflow/hello.yml)<br/>
+
+
 <img width="1485" height="728" alt="5 1" src="https://github.com/user-attachments/assets/04a99b30-a966-402a-8862-5a909d1004b8" />
 
 after fixing workflow
@@ -107,6 +110,3 @@ after fixing workflow
 <img width="1575" height="393" alt="5 2" src="https://github.com/user-attachments/assets/5390e614-41b0-41a2-a77f-b9bba9f5e3c2" />
 
 ---
-
-Happy Learning!
-**TrainWithShubham**
