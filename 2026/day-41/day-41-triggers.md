@@ -4,6 +4,7 @@
 
 ## Task Overview
 
+Learned how to trigger GitHub Actions workflows using pull requests, schedules cron, and manual inputs, and implemented matrix builds to run jobs across multiple Python versions and operating systems in parallel. Also explored excluding specific combinations and controlling execution using fail-fast for better pipeline management.
 
 ---
 
