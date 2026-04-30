@@ -66,7 +66,11 @@ Create `.github/workflows/matrix.yml` that:
 2. Each job installs Python and prints the version
 3. Watch all 3 run in parallel
 
-Then extend the matrix to also include 2 operating systems — how many total jobs run now? - `6`
+Then extend the matrix to also include 2 operating systems — how many total jobs run now? <br/>
+    - Ran jobs across Python versions: 3.10, 3.11, 3.12<br/>
+    - Extended matrix with 2 OS: Ubuntu + Windows<br/>
+    - Total jobs = 3 × 2 = 6<br/>
+    - All jobs executed in parallel<br/>
 
 ### [Matrix.yml](https://github.com/Akash-Ahir/github-actions-practice/blob/main/.github/workflows/matrix.yml)<br/>
 
@@ -79,14 +83,21 @@ Then extend the matrix to also include 2 operating systems — how many total jo
 
 ### Task 5: Exclude & Fail-Fast
 1. In your matrix, **exclude** one specific combination (e.g., Python 3.10 on Windows)
+    - Python 3.10 on Windows and linux
 
 <img width="1036" height="708" alt="task 5 1 skip version and os" src="https://github.com/user-attachments/assets/12b51b3c-3387-40e7-b371-2abd3d222d9a" /><br/>
 
 2. Set `fail-fast: false` — trigger a failure in one job and observe what happens to the rest
+   
 
 <img width="1067" height="710" alt="task 5 2 false faile false" src="https://github.com/user-attachments/assets/4ab0b4ea-badd-44af-bf7b-6c336be910fb" /><br/>
 
 3. Write in your notes: What does `fail-fast: true` (the default) do vs `false`?
+
+  fail-fast: true:
+  - Stops all remaining jobs if one job fails
+  fail-fast: false:
+  - All jobs continue running even if one fails
 
 <img width="1061" height="622" alt="task 5 3 false faile true" src="https://github.com/user-attachments/assets/698db8a9-812e-4f5a-9541-beff229f5873" /><br/>
 
