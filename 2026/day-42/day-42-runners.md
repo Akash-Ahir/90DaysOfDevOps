@@ -3,7 +3,9 @@
 **Repository**: [90DaysOfDevOps](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-42)
 
 ## Task Overview
-Until now, we’ve been writing workflows, but today we explored the environments that execute them. I worked with both GitHub-hosted runners, which are managed by GitHub, and self-hosted runners, where I set up and controlled my own execution environment on a real machine (EC2).
+
+Until now, we’ve been writing workflows, but today we explored the environments that execute them. I worked with both GitHub-hosted runners, which are managed by GitHub, and self-hosted runners, where I set up and controlled my own execution environment on a real machine.
+
 ---
 
 
@@ -20,10 +22,11 @@ Until now, we’ve been writing workflows, but today we explored the environment
    - The current user running the job
 #### 3. Watch all 3 run in parallel
 
+### [github-runner.yml](https://github.com/Akash-Ahir/github-actions-practice/blob/main/.github/workflows/github-runner.yml)<br/>
 
 
 
-<img width="962" height="788" alt="task 1" src="https://github.com/user-attachments/assets/581f9306-53ea-454e-872e-929ccf3a3f20" />
+<img width="962" height="788" alt="task 1" src="https://github.com/user-attachments/assets/581f9306-53ea-454e-872e-929ccf3a3f20" /><br/>
 
 
 #### Write in your notes: What is a GitHub-hosted runner? Who manages it?
@@ -38,6 +41,10 @@ Until now, we’ve been writing workflows, but today we explored the environment
    - Node version
    - Git version
 #### 2. Look up the GitHub docs for the full list of pre-installed software on `ubuntu-latest`
+
+### [pre-install.yml](https://github.com/Akash-Ahir/github-actions-practice/blob/main/.github/workflows/pre-install.yml)<br/>
+
+
 
 
 <img width="788" height="740" alt="task 2" src="https://github.com/user-attachments/assets/5115a9c6-5819-48e6-b733-92a0e73f227d" />
@@ -61,6 +68,7 @@ Until now, we’ve been writing workflows, but today we explored the environment
 #### **Verify:** Your runner appears in the Runners list with a green dot. - Yes
 
 
+
 <img width="1080" height="347" alt="task 3" src="https://github.com/user-attachments/assets/5b8ffa1f-db4e-45ca-9086-b9a286be021b" />
 
 
@@ -74,6 +82,9 @@ Until now, we’ve been writing workflows, but today we explored the environment
    - Print the working directory
    - Create a file and verify it exists on your machine after the run
 #### 4. Trigger it and watch it run on your own hardware
+
+
+### [self-hosted.yml](https://github.com/Akash-Ahir/github-actions-practice/blob/main/.github/workflows/self-hosted.yml)<br/>
 
 <img width="1086" height="536" alt="task 4 1" src="https://github.com/user-attachments/assets/99f2c77b-519f-4657-9546-5e9de47c81b3" />
 
@@ -97,6 +108,9 @@ Until now, we’ve been writing workflows, but today we explored the environment
 #### 1. Add a **label** to your self-hosted runner (e.g., `my-linux-runner`)
 #### 2. Update your workflow to use `runs-on: [self-hosted, my-linux-runner]`
 #### 3. Trigger it — does it still pick up the job?
+
+
+
 
 <img width="983" height="67" alt="task 5 1" src="https://github.com/user-attachments/assets/b16550d7-4891-4cdd-95c1-174e8e22d0e1" />
 
