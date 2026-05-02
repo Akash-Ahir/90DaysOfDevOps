@@ -1,9 +1,12 @@
 # Day 43 – Jobs, Steps, Env Vars & Conditionals
 **Date**: May 2, 2026  
-**Repository**: [90DaysOfDevOps](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-43)\
+**Repository**: [90DaysOfDevOps](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-43)
 
 ## Task Overview
-Today you learn how to **control the flow** of your pipeline — multi-job workflows, passing data between jobs, environment variables, and running steps only when certain conditions are met.
+## Task Overview
+
+Instead of running everything in one pipeline, I worked with multiple jobs, passed data between them, and controlled execution using environment variables and conditions.
+This is where GitHub Actions starts to feel like a real CI/CD system not just automation, but decision-making and flow control.
 
 ---
 
@@ -28,8 +31,8 @@ Make `deploy` run only **after** `test` succeeds.<br/>
 <img width="426" height="393" alt="task 1 2" src="https://github.com/user-attachments/assets/5e08bbc1-d591-4795-a453-555729104be9" /><br/>
 
 
-**Verify:** Check the workflow graph in the Actions tab — does it show the dependency chain?-yes its show the dependency chain
-
+**Verify:** Check the workflow graph in the Actions tab — does it show the dependency chain?
+  - it correctly shows the dependency chain between build - test - deploy.
 ---
 
 ## Task 2: Environment Variables
@@ -43,7 +46,6 @@ Print all three in a single step and verify each is accessible.
 Then use a **GitHub context variable** — print the commit SHA and the actor.
 
 #### [env-vars.yml](https://github.com/Akash-Ahir/github-actions-practice/blob/main/.github/workflows/env-vars.yml)<br/>
-
 
 
 <img width="938" height="626" alt="task 2" src="https://github.com/user-attachments/assets/9daf04f8-c90c-4b47-bd04-f54abc9babb9" /><br/>
@@ -68,6 +70,8 @@ Then use a **GitHub context variable** — print the commit SHA and the actor.
 
 
 Write in your notes: Why would you pass outputs between jobs?
+ - Share data between isolated jobs
+ - Helps in chaining dependent processes
 
 ---
 
@@ -77,6 +81,7 @@ In a workflow, add:
 2. A step that only runs when the previous step **failed**
 3. A job that only runs on **push** events, not on pull requests
 4. A step with `continue-on-error: true` — what does this do?
+   - Pipeline continues execution even if that step fails
 
 
 #### [Conditionals.yml](https://github.com/Akash-Ahir/github-actions-practice/blob/main/.github/workflows/Conditionals.yml)<br/>
