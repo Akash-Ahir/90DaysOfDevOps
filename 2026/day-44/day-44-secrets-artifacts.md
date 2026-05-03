@@ -4,7 +4,7 @@
 
 ## Task Overview
 
-Today your pipeline starts doing **real work** — storing sensitive values securely, saving build outputs, and running actual tests from your previous days.
+Making the pipeline more practical by handling secrets securely, managing artifacts between jobs, and running real tests. It also introduced caching to improve performance, helping the workflow behave more like a real world CI pipeline.
 
 ---
 
