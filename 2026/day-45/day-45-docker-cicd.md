@@ -4,6 +4,7 @@
 
 ## Task
 
+Automates Docker image build and deployment using GitHub Actions. On git push, the workflow checks out code, logs in to Docker Hub, builds the image, tags it (latest + commit SHA), and pushes it. The image can then be pulled and run as a container or used directly in Docker Compose for deployment.
 
 ---
 
