@@ -23,6 +23,9 @@ Create `.github/workflows/docker-publish.yml` that:
 2. Checks out the code
 3. Builds the Docker image and tags it
 
+#### [docker-publish.yml](https://github.com/Akash-Ahir/github-actions-practice/blob/main/.github/workflows/docker-publish.yml)<br/>
+
+
 <img width="1087" height="582" alt="task 2" src="https://github.com/user-attachments/assets/4d4b9ea9-34fb-41a1-b9fc-758969a9bdce" />
 
 
@@ -83,8 +86,32 @@ Test it: push to a feature branch and verify the image is built but NOT pushed.
 
 Write in your notes: What is the full journey from `git push` to a running container?
 
-After CI pushes akashahir/ai-bank-app:latest to Docker Hub, the same image can be used directly in docker-compose.yml by setting image: akashahir/ai-bank-app:latest for the app service.
+- After git push, the GitHub Actions workflow is triggered and starts executing.
+The repository code is checked out
+`uses: actions/checkout@v4`
 
-Then running docker compose up starts the container using the CI-built image instead of building locally.
+- Docker Hub login is performed using stored secrets username and token
+`uses: docker/login-action@v3`
+
+- The Docker image is then built from the application source code
+and tagged with two versions:
+`latest and sha-<commit>`
+
+- The built image is pushed to Docker Hub
+
+- The image is pulled from Docker Hub
+
+- The same image is referenced in docker-compose.yml
+
+- docker compose up
+
+- The container is started using the pulled image
+
+git push -> GitHub Actions (build + login + push) -> Docker Hub -> pull -> run container -> application running
+
+
+
+
+
 
 ---
