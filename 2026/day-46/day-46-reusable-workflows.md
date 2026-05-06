@@ -12,11 +12,16 @@
 ## Task 1: Understand `workflow_call`
 Before writing any code, research and answer in your notes:
 1. What is a **reusable workflow**?
-  - 
+  - its a workflow that can be called from another workflow we define a steps which use frequesntly and save in another workflow and call it with workflow call whenever it needed
 
 2. What is the `workflow_call` trigger?
+  - it is use to trigger the saved predefine workflow by call the workflow with the help of workflowcall
+
 3. How is calling a reusable workflow different from using a regular action (`uses:`)?
+  - `uses` use to cal a specific action in workflow where workflow call is used to call a full workflow 
+
 4. Where must a reusable workflow file live?
+  - ./.github/worflows
 
 ---
 
@@ -34,6 +39,11 @@ Create `.github/workflows/reusable-build.yml`:
    - Prints `Docker token is set: true` (never print the actual secret)
 
 **Verify:** This file alone won't run — it needs a caller. That's next.
+#### [reusable-build.yml](https://github.com/Akash-Ahir/github-actions-practice/blob/main/.github/workflows/reusable-build.yml)<br/>
+
+
+  <img width="958" height="455" alt="task 2" src="https://github.com/user-attachments/assets/585f8b17-393b-4d3d-93fb-55f50103a293" /><br/>
+
 
 ---
 
@@ -53,7 +63,15 @@ Create `.github/workflows/call-build.yml`:
    ```
 3. Push to `main` and watch it run
 
-**Verify:** In the Actions tab, do you see the caller triggering the reusable workflow? Click into the job — can you see the inputs printed?
+
+
+**Verify:** In the Actions tab, do you see the caller triggering the reusable workflow? Click into the job — can you see the inputs printed?- yes
+
+#### [call-build.yml](https://github.com/Akash-Ahir/github-actions-practice/blob/main/.github/workflows/call-build.yml)<br/>
+
+
+  <img width="813" height="477" alt="task 3" src="https://github.com/user-attachments/assets/e8f3f277-86ad-41c2-b3e5-54dbb6fb2128" /><br/>
+
 
 ---
 
@@ -66,6 +84,9 @@ Extend `reusable-build.yml`:
    - Reads and prints the `build_version` output
 
 **Verify:** Does the second job print the version from the reusable workflow?
+
+  <img width="793" height="442" alt="task 4" src="https://github.com/user-attachments/assets/b97b367a-dc8b-4a0c-9131-c8fc171cd4f3" /><br/>
+
 
 ---
 
@@ -80,6 +101,12 @@ Create a **custom composite action** in your repo at `.github/actions/setup-and-
 
 **Verify:** Does your custom action run and print the greeting?
 
+#### [action.yml](https://github.com/Akash-Ahir/github-actions-practice/blob/main/.github/actions/setup-and-greet/action.yml)<br/>
+
+
+  <img width="758" height="642" alt="task 5" src="https://github.com/user-attachments/assets/85869149-cbd4-425b-8679-e4511fcf4154" /><br/>
+
+
 ---
 
 ## Task 6: Reusable Workflow vs Composite Action
@@ -88,10 +115,10 @@ Fill this in your notes:
 | | Reusable Workflow | Composite Action |
 |---|---|---|
 | Triggered by | `workflow_call` | `uses:` in a step |
-| Can contain jobs? | ? | ? |
-| Can contain multiple steps? | ? | ? |
-| Lives where? | ? | ? |
-| Can accept secrets directly? | ? | ? |
+| Can contain jobs? | yes | no |
+| Can contain multiple steps? | yes | yes |
+| Lives where? | ./.github/workflows/ | ./.github/actions/ |
+| Can accept secrets directly? | yes | no |
 | Best for | ? | ? |
 
 ---
