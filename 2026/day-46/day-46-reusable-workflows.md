@@ -2,7 +2,13 @@
 **Date**: May 5, 2026  
 **Repository**: [90DaysOfDevOps](https://github.com/akashahir50/90DaysOfDevOps/tree/master/2026/day-46)
 
+---
+
 ## Task Overview
+
+In this task, I learned how to make GitHub Actions workflows reusable using `workflow_call` to avoid repeating the same steps. I also explored passing inputs, secrets, and outputs between workflows, and created a composite action to reuse steps inside a job. This helps in building cleaner and more maintainable CI/CD pipelines.
+
+
 
 ---
 
