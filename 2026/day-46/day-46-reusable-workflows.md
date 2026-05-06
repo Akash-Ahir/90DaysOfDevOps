@@ -12,16 +12,16 @@
 ## Task 1: Understand `workflow_call`
 Before writing any code, research and answer in your notes:
 1. What is a **reusable workflow**?
-  - its a workflow that can be called from another workflow we define a steps which use frequesntly and save in another workflow and call it with workflow call whenever it needed
+  - It’s a workflow you define once and reuse across different workflows instead of writing the same steps again and again.
 
-2. What is the `workflow_call` trigger?
-  - it is use to trigger the saved predefine workflow by call the workflow with the help of workflowcall
-
+3. What is the `workflow_call` trigger?
+  - `workflow_call` is a trigger that allows a `workflow` to be invoked by another workflow.
+    
 3. How is calling a reusable workflow different from using a regular action (`uses:`)?
-  - `uses` use to cal a specific action in workflow where workflow call is used to call a full workflow 
+  - `uses` is used to call an action, while `workflow_call` is used to call an entire workflow that can include multiple jobs and steps.
 
 4. Where must a reusable workflow file live?
-  - ./.github/worflows
+  - `./.github/worflows`
 
 ---
 
@@ -119,6 +119,6 @@ Fill this in your notes:
 | Can contain multiple steps? | yes | yes |
 | Lives where? | ./.github/workflows/ | ./.github/actions/ |
 | Can accept secrets directly? | yes | no |
-| Best for | ? | ? |
+| Best for | reusable jobbs  | reusable steps |
 
 ---
