@@ -36,7 +36,7 @@ Create `.github/workflows/reusable-build-test.yml`:
 
 This workflow does NOT deploy — it only builds and tests.
 
-#### [reusable-build-test.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-48/AI-BankApp-DevOps/.github/workflows/reusable-build-test.yml)<br/>
+#### [reusable-build-test.yml](https://github.com/Akash-Ahir/CICD-Capstone-Project/tree/main/.github/workflows/reusable-build-test.yml)<br/>
 
 
 
@@ -54,7 +54,7 @@ Create `.github/workflows/reusable-docker.yml`:
    - Build and push the image with the given tag
    - Set output: `image_url` with the full image path
   
-#### [reusable-docker.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-48/AI-BankApp-DevOps/.github/workflows/reusable-docker.yml)<br/>
+#### [reusable-docker.yml](https://github.com/Akash-Ahir/CICD-Capstone-Project/tree/main/.github/workflows/reusable-docker.yml)<br/>
 
 
 ---
@@ -72,7 +72,7 @@ Create `.github/workflows/pr-pipeline.yml`:
 **Verify:** Open a PR — does it run tests only (no Docker push)? - yes
 
 
-#### [pr-pipeline.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-48/AI-BankApp-DevOps/.github/workflows/pr-pipeline.yml)<br/>
+#### [pr-pipeline.yml](https://github.com/Akash-Ahir/CICD-Capstone-Project/tree/main/.github/workflows/pr-pipeline.yml)<br/>
 
 <img width="352" height="477" alt="task 4 1" src="https://github.com/user-attachments/assets/222f595e-2083-48b4-a27e-c2882569a395" /><br/>
 
@@ -98,7 +98,7 @@ Create `.github/workflows/main-pipeline.yml`:
 **Verify:** Merge a PR to `main` — does it run tests → build Docker → deploy in sequence?
 
 
-#### [main-pipeline.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-48/AI-BankApp-DevOps/.github/workflows/main-pipeline.yml)<br/>
+#### [main-pipeline.yml](https://github.com/Akash-Ahir/CICD-Capstone-Project/tree/main/.github/workflows/main-pipeline.yml)<br/>
 
 <img width="1532" height="506" alt="task 5 1" src="https://github.com/user-attachments/assets/d2a40c95-81c7-4047-8a3b-47eeb71c9552" /><br/>
 
@@ -131,7 +131,7 @@ Create `.github/workflows/health-check.yml`:
    ```
 
 
-   #### [health-check.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-48/AI-BankApp-DevOps/.github/workflows/health-check.yml)<br/>
+   #### [health-check.yml](https://github.com/Akash-Ahir/CICD-Capstone-Project/tree/main/.github/workflows/workflows/health-check.yml)<br/>
 
    <img width="332" height="240" alt="task 6 1" src="https://github.com/user-attachments/assets/0adbd075-09e8-4888-988b-924aecc118ed" /><br/>
 
@@ -148,7 +148,7 @@ Create `.github/workflows/health-check.yml`:
    Every 12 hours → health check
    ```
 
- #### [README.md](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-48/AI-BankApp-DevOps/README.md)<br/>
+ #### [README.md](https://github.com/Akash-Ahir/CICD-Capstone-Project/README.md)<br/>
     
 3. Fill in your notes: What would you add next? (Slack notifications? Multi-environment? Rollback?)
 
