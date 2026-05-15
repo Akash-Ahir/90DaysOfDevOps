@@ -10,17 +10,9 @@ This is your GitHub Actions capstone.
 
 ---
 
-## Expected Output
-- A GitHub repo with a working app, Dockerfile, and complete CI/CD pipeline
-- At least 3 workflow files working together
-- A markdown file: `day-48-actions-project.md`
-- Screenshot of your full pipeline in action
-
----
-
 ## Challenge Tasks
 
-### Task 1: Set Up the Project Repo
+## Task 1: Set Up the Project Repo
 1. Create a new repo called `github-actions-capstone` (or use your existing `github-actions-practice`)
 2. Add a simple app — pick any one:
    - A Python Flask/FastAPI app with one endpoint
@@ -31,7 +23,7 @@ This is your GitHub Actions capstone.
 
 ---
 
-### Task 2: Reusable Workflow — Build & Test
+## Task 2: Reusable Workflow — Build & Test
 Create `.github/workflows/reusable-build-test.yml`:
 1. Trigger: `workflow_call`
 2. Inputs: `python_version` (or `node_version`), `run_tests` (boolean, default: true)
@@ -44,9 +36,14 @@ Create `.github/workflows/reusable-build-test.yml`:
 
 This workflow does NOT deploy — it only builds and tests.
 
+#### [reusable-build-test.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-48/AI-BankApp-DevOps/.github/workflows/reusable-build-test.yml)<br/>
+
+
+
+
 ---
 
-### Task 3: Reusable Workflow — Docker Build & Push
+## Task 3: Reusable Workflow — Docker Build & Push
 Create `.github/workflows/reusable-docker.yml`:
 1. Trigger: `workflow_call`
 2. Inputs: `image_name` (string), `tag` (string)
@@ -56,10 +53,13 @@ Create `.github/workflows/reusable-docker.yml`:
    - Log in to Docker Hub
    - Build and push the image with the given tag
    - Set output: `image_url` with the full image path
+  
+#### [reusable-docker.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-48/AI-BankApp-DevOps/.github/workflows/reusable-docker.yml)<br/>
+
 
 ---
 
-### Task 4: PR Pipeline
+## Task 4: PR Pipeline
 Create `.github/workflows/pr-pipeline.yml`:
 1. Trigger: `pull_request` to `main` (types: `opened`, `synchronize`)
 2. Call the reusable build-test workflow:
@@ -69,11 +69,22 @@ Create `.github/workflows/pr-pipeline.yml`:
    - Prints a summary: "PR checks passed for branch: `<branch>`"
 4. Do **NOT** build or push Docker images on PRs
 
-**Verify:** Open a PR — does it run tests only (no Docker push)?
+**Verify:** Open a PR — does it run tests only (no Docker push)? - yes
+
+
+#### [pr-pipeline.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-48/AI-BankApp-DevOps/.github/workflows/pr-pipeline.yml)<br/>
+
+<img width="352" height="477" alt="task 4 1" src="https://github.com/user-attachments/assets/222f595e-2083-48b4-a27e-c2882569a395" /><br/>
+
+<img width="527" height="320" alt="task 4 2" src="https://github.com/user-attachments/assets/ccafd10e-c295-4325-8472-43d9f4ef6322" /><br/>
+
+<img width="682" height="362" alt="task 4 3" src="https://github.com/user-attachments/assets/a4da2894-c885-4fbe-bb1e-7740a9ecb310" /><br/>
+
+
 
 ---
 
-### Task 5: Main Branch Pipeline
+## Task 5: Main Branch Pipeline
 Create `.github/workflows/main-pipeline.yml`:
 1. Trigger: `push` to `main`
 2. Job 1: Call the reusable build-test workflow
@@ -85,6 +96,20 @@ Create `.github/workflows/main-pipeline.yml`:
    - Requires manual approval if you've set up environment protection rules
 
 **Verify:** Merge a PR to `main` — does it run tests → build Docker → deploy in sequence?
+
+
+#### [main-pipeline.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-48/AI-BankApp-DevOps/.github/workflows/main-pipeline.yml)<br/>
+
+<img width="1532" height="506" alt="task 5 1" src="https://github.com/user-attachments/assets/d2a40c95-81c7-4047-8a3b-47eeb71c9552" /><br/>
+
+<img width="1011" height="352" alt="task 5 2" src="https://github.com/user-attachments/assets/15dfb06e-ac4e-4f08-8d02-06082c5381f7" /><br/>
+
+<img width="517" height="311" alt="task 5 3" src="https://github.com/user-attachments/assets/356037b6-b1f0-4d1b-8a39-53c1e1eaef87" /><br/>
+
+
+
+
+
 
 ---
 
@@ -105,6 +130,13 @@ Create `.github/workflows/health-check.yml`:
    echo "- Time: $(date)" >> $GITHUB_STEP_SUMMARY
    ```
 
+
+   #### [health-check.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-48/AI-BankApp-DevOps/.github/workflows/health-check.yml)<br/>
+
+   <img width="332" height="240" alt="task 6 1" src="https://github.com/user-attachments/assets/0adbd075-09e8-4888-988b-924aecc118ed" /><br/>
+
+
+
 ---
 
 ### Task 7: Add Badges & Documentation
@@ -115,6 +147,9 @@ Create `.github/workflows/health-check.yml`:
    Merge to main → build & test → Docker build & push → deploy
    Every 12 hours → health check
    ```
+
+ #### [README.md](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-48/AI-BankApp-DevOps/README.md)<br/>
+    
 3. Fill in your notes: What would you add next? (Slack notifications? Multi-environment? Rollback?)
 
 ---
@@ -125,40 +160,9 @@ Want to go above and beyond? Add a **DevSecOps** step to your main pipeline:
 2. Fail the pipeline if any **CRITICAL** severity CVE is found
 3. Upload the scan report as an artifact
 
-This is a preview of what you'll do in depth on **Day 49**. If you get this working today, you're already thinking like a DevSecOps engineer.
+<img width="667" height="332" alt="task brownie" src="https://github.com/user-attachments/assets/1ea43177-51c9-49bc-9308-36b18a98b868" /><br/>
+
+
 
 ---
 
-## Hints
-- Environment protection: Repo Settings → Environments → Add `production` → enable "Required reviewers"
-- `$GITHUB_STEP_SUMMARY` renders markdown in the Actions run summary page
-- Short SHA for tags: `$(echo ${{ github.sha }} | cut -c1-7)`
-- Reusable workflow outputs: accessed via `${{ needs.<job>.outputs.<name> }}`
-- Use `actions/github-script` if you want to post PR comments programmatically
-
----
-
-## Documentation
-Create `day-48-actions-project.md` with:
-- Your pipeline architecture (the flow diagram from Task 7)
-- All workflow YAML files
-- Screenshot of a PR running the test-only pipeline
-- Screenshot of a main branch push running the full pipeline
-- Docker Hub link to your pushed image
-- What you'd improve next
-
----
-
-## Submission
-1. Add `day-48-actions-project.md` to `2026/day-48/`
-2. Commit and push to your fork
-
----
-
-## Learn in Public
-Share your complete pipeline architecture on LinkedIn — you just built production-grade CI/CD from scratch using only GitHub Actions. That's serious DevOps skill.
-
-`#90DaysOfDevOps` `#DevOpsKaJosh` `#TrainWithShubham`
-
-Happy Learning!
-**TrainWithShubham**
