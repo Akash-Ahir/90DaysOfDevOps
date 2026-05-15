@@ -131,7 +131,7 @@ Create `.github/workflows/health-check.yml`:
    ```
 
 
-   #### [health-check.yml](https://github.com/Akash-Ahir/CICD-Capstone-Project/tree/main/.github/workflows/workflows/health-check.yml)<br/>
+   #### [health-check.yml](https://github.com/Akash-Ahir/CICD-Capstone-Project/tree/main/.github/workflows/health-check.yml)<br/>
 
    <img width="332" height="240" alt="task 6 1" src="https://github.com/user-attachments/assets/0adbd075-09e8-4888-988b-924aecc118ed" /><br/>
 
