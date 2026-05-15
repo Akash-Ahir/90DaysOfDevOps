@@ -154,7 +154,7 @@ Create `.github/workflows/health-check.yml`:
    Every 12 hours → health check
    ```
 
- #### [README.md](https://github.com/Akash-Ahir/CICD-Capstone-Project/README.md)<br/>
+
     
  <img width="506" height="275" alt="task 6 3" src="https://github.com/user-attachments/assets/c102e3e3-5258-4834-8d60-38fe89948903" /><br/>
 
