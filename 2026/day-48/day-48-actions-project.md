@@ -163,7 +163,10 @@ Create `.github/workflows/health-check.yml`:
 ## Brownie Points: Add Security to Your Pipeline
 Want to go above and beyond? Add a **DevSecOps** step to your main pipeline:
 1. Add `aquasecurity/trivy-action` after the Docker build step to scan your image for vulnerabilities
-2. Fail the pipeline if any **CRITICAL** severity CVE is found
+2. Fail the pipeline if any **CRITICAL** severity CVE is found <br/>
+<img width="1122" height="377" alt="task brownie 2" src="https://github.com/user-attachments/assets/aa0dbd5a-98c4-4329-99f4-8acc8b9f6592" /><br/>
+
+
 3. Upload the scan report as an artifact
 
 <img width="667" height="332" alt="task brownie" src="https://github.com/user-attachments/assets/1ea43177-51c9-49bc-9308-36b18a98b868" /><br/>
@@ -171,4 +174,8 @@ Want to go above and beyond? Add a **DevSecOps** step to your main pipeline:
 
 
 ---
+## Pipeline Architecture
+
+<img width="1905" height="1603" alt="diagram-export-5-15-2026-5_46_00-PM" src="https://github.com/user-attachments/assets/0489ec4b-444b-42c3-b90b-581dc3360bb0" />
+
 
