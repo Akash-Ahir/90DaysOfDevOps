@@ -137,7 +137,7 @@ Create `.github/workflows/health-check.yml`:
 
    <img width="442" height="221" alt="image" src="https://github.com/user-attachments/assets/1d99c451-0539-4c16-94fe-5751605e5306" /><br/>
 
-   <img width="686" height="447" alt="image" src="https://github.com/user-attachments/assets/2ae1cb5f-e6cf-4f9a-bc88-969025736313" /><br/>
+ 
 
 
 
@@ -156,7 +156,7 @@ Create `.github/workflows/health-check.yml`:
 
  #### [README.md](https://github.com/Akash-Ahir/CICD-Capstone-Project/README.md)<br/>
     
-3. Fill in your notes: What would you add next? (Slack notifications? Multi-environment? Rollback?)
+ <img width="506" height="275" alt="task 6 3" src="https://github.com/user-attachments/assets/c102e3e3-5258-4834-8d60-38fe89948903" /><br/>
 
 ---
 
