@@ -135,6 +135,9 @@ Create `.github/workflows/health-check.yml`:
 
    <img width="332" height="240" alt="task 6 1" src="https://github.com/user-attachments/assets/0adbd075-09e8-4888-988b-924aecc118ed" /><br/>
 
+   <img width="442" height="221" alt="image" src="https://github.com/user-attachments/assets/1d99c451-0539-4c16-94fe-5751605e5306" /><br/>
+
+
 
 
 ---
