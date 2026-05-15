@@ -4,9 +4,7 @@
 
 
 ## Task
-You've learned workflows, triggers, secrets, Docker builds, reusable workflows, and advanced events. Today you **put it all together** in one project — a complete, production-style CI/CD pipeline that builds, tests, and deploys using everything you've learned from Day 40 to Day 47.
-
-This is your GitHub Actions capstone.
+Built a complete CI/CD pipeline using GitHub Actions for a Dockerized banking application. The project includes reusable workflows for build, testing, Docker image creation, deployment automation, scheduled health checks, and Trivy security scanning. Pull requests run test validations, while merges to the main branch trigger Docker build, image push, and deployment workflows automatically.
 
 ---
 
