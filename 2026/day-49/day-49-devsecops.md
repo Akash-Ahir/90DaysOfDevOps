@@ -146,7 +146,8 @@ ALWAYS ACTIVE:
 Draw this diagram in your notes. You just built a **DevSecOps pipeline** — security is now part of your automation, not an afterthought.
 
    #### [pr-pipeline.yml](https://github.com/Akash-Ahir/CICD-Capstone-Project/blob/main/.github/workflows/pr-pipeline.yml)<br/>
-   <img width="786" height="281" alt="prpipeline" src="https://github.com/user-attachments/assets/e5dc0f1b-08fb-43df-a368-af5e7c71c0d7" />
+   <img width="786" height="281" alt="prpipeline" src="https://github.com/user-attachments/assets/e5dc0f1b-08fb-43df-a368-af5e7c71c0d7" /><br/>
+   
    #### [main-pipeline.yml](https://github.com/Akash-Ahir/CICD-Capstone-Project/blob/main/.github/workflows/main-pipeline.yml)<br/>
    <img width="1270" height="233" alt="mainpipeline" src="https://github.com/user-attachments/assets/5e4dbe9d-9849-4b74-8a41-bccec0a94fbc" />
 
