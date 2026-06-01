@@ -5,7 +5,7 @@
 
 ## Task Overview
 
-I improved my CI/CD pipeline by adding basic DevSecOps practices to automate security checks. I integrated vulnerability scanning for Docker images, dependency checks in pull requests, secret detection, and limited workflow permissions to make the pipeline more secure and catch issues before deployment.
+I improved my CI/CD pipeline by adding DevSecOps practices such as Docker vulnerability scanning, dependency checks in pull requests, secret detection, and restricted workflow permissions to improve security before deployment.
 
 ---
 
@@ -39,7 +39,7 @@ Push and check the Actions tab. Read the scan output.
 
 
 **Verify:** Can you see the vulnerability table in the logs? Did it pass or fail? 
-- scan passed
+-The Trivy scan ran successfully and no blocking HIGH/CRITICAL vulnerabilities prevented the pipeline from continuing.
 
 ---
 
@@ -57,8 +57,8 @@ That's it — no workflow changes needed. GitHub does this automatically.
 
 Write in your notes:
 - What is the difference between secret scanning and push protection?
-  Secret scanning- Secret scanning detects secrets that already exist in the repository and raises alerts
-  push protection- Push protection blocks a push if GitHub detects a supported secret before it reaches the repository.
+  Secret scanning- Detects secrets that already exist in the repository and raises alerts
+  push protection- Blocks a push if GitHub detects a supported secret before it reaches the repository.
 
 
 ---
@@ -84,6 +84,7 @@ Test it:
 
 
 **Verify:** Does the dependency review show up as a check on your PR?
+ - The dependency review workflow ran and reported dependency-related issues during the PR check.
 
 ---
 
