@@ -4,10 +4,7 @@
 
 
 ## Task Overview
-You can build and deploy automatically. But what if your Docker image has a known vulnerability? What if someone accidentally commits a password? Today you learn **DevSecOps** — adding simple, automated security checks to your pipeline so problems are caught **before** they reach production.
-
-Don't worry — this isn't a security course. You're just adding a few smart steps to the pipeline you already built.
-
+I improved my CI/CD pipeline by adding basic DevSecOps practices to automate security checks. I integrated vulnerability scanning for Docker images, dependency checks in pull requests, secret detection, and limited workflow permissions to make the pipeline more secure and catch issues before deployment.
 ---
 
 
