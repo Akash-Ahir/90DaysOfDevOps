@@ -115,86 +115,43 @@ Write in your notes: Why is it a good practice to limit workflow permissions? Wh
 Look at what your pipeline does now:
 
 ```
+PR FLOW:
+-------
 PR opened
-  → build & test
-  → dependency vulnerability check     ← NEW (Day 49)
-  → PR checks pass or fail
+ → Build & Test
+ → Dependency Review (NEW)
+ → Secret Scan (Gitleaks)
+ → SAST (Semgrep)
+ → SCA (OWASP Dependency Check)
+ → PR checks pass/fail
 
-Merge to main
-  → build & test
-  → Docker build
-  → Trivy image scan (fail on CRITICAL) ← NEW (Day 49)
-  → Docker push (only if scan passes)
-  → deploy
 
-Always active
-  → GitHub secret scanning              ← NEW (Day 49)
-  → push protection for secrets         ← NEW (Day 49)
+MAIN BRANCH FLOW:
+----------------
+Push to main
+ → Build Maven App
+ → Docker Build
+ → Trivy Image Scan (FAIL on HIGH/CRITICAL)
+ → Push to ECR
+ → Deploy to EC2
+ → DAST (OWASP ZAP)
+
+
+ALWAYS ACTIVE:
+-------------
+ → GitHub Secret Scanning
+ → Push Protection for Secrets
 ```
 
 Draw this diagram in your notes. You just built a **DevSecOps pipeline** — security is now part of your automation, not an afterthought.
 
----
+   #### [pr-pipeline.yml](https://github.com/Akash-Ahir/CICD-Capstone-Project/blob/main/.github/workflows/pr-pipeline.yml)<br/>
+   <img width="786" height="281" alt="prpipeline" src="https://github.com/user-attachments/assets/e5dc0f1b-08fb-43df-a368-af5e7c71c0d7" />
+   #### [main-pipeline.yml](https://github.com/Akash-Ahir/CICD-Capstone-Project/blob/main/.github/workflows/main-pipeline.yml)<br/>
+   <img width="1270" height="233" alt="mainpipeline" src="https://github.com/user-attachments/assets/5e4dbe9d-9849-4b74-8a41-bccec0a94fbc" />
 
-## Brownie Points (Optional — For the Curious)
+   
 
-### Pin Actions to Commit SHAs
-Tags like `@v4` can be moved by the action author. For extra security, pin to the exact commit:
-```yaml
-# Instead of this:
-uses: actions/checkout@v4
-
-# Use this:
-uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-```
-This protects against supply chain attacks where a tag is silently changed.
-
-### Upload Scan Results to GitHub Security Tab
-Add SARIF output to Trivy and upload it — your scan results will appear in the repo's **Security** tab:
-```yaml
-- uses: aquasecurity/trivy-action@master
-  with:
-    image-ref: 'your-username/your-app:latest'
-    format: 'sarif'
-    output: 'trivy-results.sarif'
-- uses: github/codeql-action/upload-sarif@v3
-  with:
-    sarif_file: 'trivy-results.sarif'
-```
-
-### Learn About OIDC (Keyless Authentication)
-Instead of storing cloud credentials as long-lived secrets, GitHub Actions can use OIDC to get short-lived tokens automatically. Research: "GitHub Actions OIDC" — it's how production pipelines authenticate to AWS, GCP, and Azure without storing any keys.
 
 ---
 
-## Hints
-- Trivy action docs: look up `aquasecurity/trivy-action` on GitHub
-- `exit-code: '1'` = fail the step, `exit-code: '0'` = just warn
-- Dependency review only works on `pull_request` events (not on push)
-- Permissions block goes at the workflow level or the job level
-- GitHub secret scanning is free for public repos
-
----
-
-## Documentation
-Create `day-49-devsecops.md` with:
-- What DevSecOps means in your own words (2-3 sentences)
-- Screenshot of Trivy scan output in your pipeline
-- Your updated pipeline diagram with security steps
-- What you learned about secret scanning and dependency review
-
----
-
-## Submission
-1. Add `day-49-devsecops.md` to `2026/day-49/`
-2. Commit and push to your fork
-
----
-
-## Learn in Public
-Share your pipeline diagram on LinkedIn — "My CI/CD pipeline now scans for vulnerabilities automatically." Simple, powerful, and impressive.
-
-`#90DaysOfDevOps` `#DevOpsKaJosh` `#TrainWithShubham`
-
-Happy Learning!
-**TrainWithShubham**
