@@ -4,7 +4,9 @@
 
 
 ## Task Overview
+
 I improved my CI/CD pipeline by adding basic DevSecOps practices to automate security checks. I integrated vulnerability scanning for Docker images, dependency checks in pull requests, secret detection, and limited workflow permissions to make the pipeline more secure and catch issues before deployment.
+
 ---
 
 
