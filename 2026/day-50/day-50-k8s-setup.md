@@ -2,7 +2,7 @@
 
 ## Task Overview
 
-basic architecture of Kubernetes, including Control Plane and Worker Node components, and understood how a Pod is scheduled and executed within a cluster. I installed kubectl, created a local Kubernetes cluster using Kind, verified cluster resources, and inspected system Pods running in the kube-system namespace. I also practiced cluster lifecycle operations and reviewed the purpose of the kubeconfig file.
+Started working with basic architecture of Kubernetes, including Control Plane and Worker Node components, and understood how a Pod is scheduled and executed within a cluster. I installed kubectl, created a local Kubernetes cluster using Kind, verified cluster resources, and inspected system Pods running in the kube-system namespace. I also practiced cluster lifecycle operations and reviewed the purpose of the kubeconfig file.
 
 ---
 
