@@ -1,9 +1,8 @@
 # Day 50 – Kubernetes Architecture and Cluster Setup
 
-## Task
-You have been building and shipping containers with Docker. But what happens when you need to run hundreds of containers across multiple servers? You need an orchestrator. Today you start your Kubernetes journey — understand the architecture, set up a local cluster, and run your first `kubectl` commands.
+## Task Overview
 
-This is where things get real.
+basic architecture of Kubernetes, including Control Plane and Worker Node components, and understood how a Pod is scheduled and executed within a cluster. I installed kubectl, created a local Kubernetes cluster using Kind, verified cluster resources, and inspected system Pods running in the kube-system namespace. I also practiced cluster lifecycle operations and reviewed the purpose of the kubeconfig file.
 
 ---
 
