@@ -59,7 +59,7 @@ After drawing, verify your understanding:
     Pods on that node stop, but kubelet on other nodes keep working. Scheduler will move pods to healthy nodes eventually
 ---
 
-### Task 3: Install kubectl
+## Task 3: Install kubectl
 `kubectl` is the CLI tool you will use to talk to your Kubernetes cluster.
 
 Install it:
@@ -80,10 +80,13 @@ Verify:
 ```bash
 kubectl version --client
 ```
+<img width="1432" height="255" alt="task 3" src="https://github.com/user-attachments/assets/be295636-260f-4231-80ec-d067ef167723" />
+
+
 
 ---
 
-### Task 4: Set Up Your Local Cluster
+## Task 4: Set Up Your Local Cluster
 Choose **one** of the following. Both give you a fully functional Kubernetes cluster on your machine.
 
 **Option A: kind (Kubernetes in Docker)**
@@ -104,6 +107,9 @@ kind create cluster --name devops-cluster
 kubectl cluster-info
 kubectl get nodes
 ```
+
+<img width="1342" height="731" alt="task 4" src="https://github.com/user-attachments/assets/3f2c2c11-979f-48c4-a706-2e48a95e5b09" />
+
 
 **Option B: minikube**
 ```bash
@@ -127,7 +133,7 @@ Write down: Which one did you choose and why?
 
 ---
 
-### Task 5: Explore Your Cluster
+## Task 5: Explore Your Cluster
 Now that your cluster is running, explore it:
 
 ```bash
@@ -151,6 +157,15 @@ Look at the pods running in the `kube-system` namespace:
 ```bash
 kubectl get pods -n kube-system
 ```
+<img width="862" height="911" alt="task 5" src="https://github.com/user-attachments/assets/6dae0d89-12fc-4be4-b4e3-a0303866efa8" /><br/>
+<img width="957" height="322" alt="task 5 b" src="https://github.com/user-attachments/assets/e5cadfa7-be56-49fb-8309-cd67bc6eeecd" /><br/>
+<img width="837" height="217" alt="task 5 c" src="https://github.com/user-attachments/assets/91bc857e-be62-4fcd-822f-0bf5f8108284" /><br/>
+
+
+
+
+
+
 
 You should see pods like `etcd`, `kube-apiserver`, `kube-scheduler`, `kube-controller-manager`, `coredns`, and `kube-proxy`. These are the architecture components you drew in Task 2 — running as pods inside the cluster.
 
@@ -158,7 +173,7 @@ You should see pods like `etcd`, `kube-apiserver`, `kube-scheduler`, `kube-contr
 
 ---
 
-### Task 6: Practice Cluster Lifecycle
+## Task 6: Practice Cluster Lifecycle
 Build muscle memory with cluster operations:
 
 ```bash
@@ -186,40 +201,12 @@ kubectl config get-contexts
 kubectl config view
 ```
 
+<img width="607" height="657" alt="task 6" src="https://github.com/user-attachments/assets/4607b1bc-a35b-43fb-b3c0-08765e2c6c5c" />
+
+
 Write down: What is a kubeconfig? Where is it stored on your machine?
+    - file that tells kubectl which cluster to talk to, how to authenticate, and what settings to use.
+    - /home/akashahir/.kube/config
 
 ---
 
-## Hints
-- kind requires Docker to be running (it creates clusters using containers)
-- minikube can use Docker, VirtualBox, or other drivers
-- The default kubeconfig file is at `~/.kube/config`
-- `kubectl get pods -A` is short for `kubectl get pods --all-namespaces`
-- If `kubectl` cannot connect, check if your cluster is running: `kind get clusters` or `minikube status`
-- `-o wide` flag gives extra details: `kubectl get nodes -o wide`
-
----
-
-## Documentation
-Create `day-50-k8s-setup.md` with:
-- Kubernetes history in your own words (3-4 sentences)
-- Your architecture diagram (text-based or image)
-- Which tool you chose (kind/minikube) and why
-- Screenshot of `kubectl get nodes` and `kubectl get pods -n kube-system`
-- What each kube-system pod does
-
----
-
-## Submission
-1. Add `day-50-k8s-setup.md` to `2026/day-50/`
-2. Commit and push to your fork
-
----
-
-## Learn in Public
-Share on LinkedIn: "Started my Kubernetes journey today. Set up a local cluster, explored the architecture, and saw the control plane components running as actual pods. The orchestration chapter begins."
-
-`#90DaysOfDevOps` `#DevOpsKaJosh` `#TrainWithShubham`
-
-Happy Learning!
-**TrainWithShubham**
