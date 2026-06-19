@@ -223,7 +223,3 @@ Notice that when you delete a standalone Pod, it is gone forever. There is no co
 
 ---
 <img width="1291" height="372" alt="task 6" src="https://github.com/user-attachments/assets/a9693758-da36-4f75-8e0f-75ebae6b2499" />
-
-
-Happy Learning!
-**TrainWithShubham**
