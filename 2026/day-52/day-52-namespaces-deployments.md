@@ -83,8 +83,10 @@ kubectl get pods -A
 Notice that `kubectl get pods` without `-n` only shows the `default` namespace. You must specify `-n <namespace>` or use `-A` to see everything.
 
 **Verify:** Does `kubectl get pods` show these pods? What about `kubectl get pods -A`?
-    `kubectl get pods` - will show only default namespace pod 
-     `kubectl get pods -A` - will show pods across all namespace
+
+  `kubectl get pods` - will show only default namespace pod 
+
+  `kubectl get pods -A` - will show pods across all namespace
 
 ---
 
