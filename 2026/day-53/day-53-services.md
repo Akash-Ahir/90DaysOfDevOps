@@ -159,7 +159,7 @@ exit
 Both the short name and the full DNS name resolve to the same ClusterIP. In practice, you use the short name when communicating within the same namespace and the full name when reaching across namespaces.
 
 **Verify:** What IP does `nslookup` return? Does it match the CLUSTER-IP from `kubectl get services`?
-  - No
+  - The DNS lookup was handled by CoreDNS (10.96.0.10). Both the short DNS name and the fully qualified DNS name successfully resolved the service and returned the Nginx page. The Service ClusterIP was 10.96.208.54.
 
 ---
 
@@ -212,7 +212,7 @@ curl http://localhost:30080
 
 ---
 
-### Task 5: LoadBalancer Service (Cloud External Access)
+## Task 5: LoadBalancer Service (Cloud External Access)
 In a cloud environment (AWS, GCP, Azure), a LoadBalancer Service provisions a real external load balancer that routes traffic to your nodes.
 
 Create `loadbalancer-service.yaml`:
@@ -252,10 +252,11 @@ kubectl get services
 In a real cloud cluster, the EXTERNAL-IP would be a public IP address or hostname provisioned by the cloud provider.
 
 **Verify:** What does the EXTERNAL-IP column show? Why is it `<pending>` on a local cluster?
+ - On a local cluster (Minikube, Kind, Docker Desktop), the EXTERNAL-IP will show <pending> because there is no cloud provider to create a real load balancer
 
 ---
 
-### Task 6: Understand the Service Types Side by Side
+## Task 6: Understand the Service Types Side by Side
 Check all three services:
 
 ```bash
@@ -285,6 +286,7 @@ kubectl describe service web-app-loadbalancer
 You should see all three: a ClusterIP, a NodePort, and the LoadBalancer configuration.
 
 **Verify:** Does the LoadBalancer service also have a ClusterIP and NodePort assigned?
+  - Yes. The LoadBalancer service automatically received both a ClusterIP and a NodePort. Kubernetes builds the LoadBalancer service on top of the NodePort and ClusterIP service types.
 
 ---
 
