@@ -109,6 +109,19 @@ Use environment variables for simple key-value settings. Use volume mounts for f
 
 
 
+## Key Learnings
+
+- ConfigMaps are used to store non-sensitive configuration data.
+- Secrets are used to store sensitive information such as passwords and API keys.
+- ConfigMap data is stored as plain text.
+- Secret data is Base64 encoded, not encrypted.
+- Environment variables are loaded only when a Pod starts.
+- ConfigMaps and Secrets mounted as volumes can update automatically.
+- Each Secret key becomes a separate file when mounted as a volume.
+- Separating configuration from container images improves maintainability and portability.
+
+
+
 
 **Verify:** Did the volume-mounted value change without a pod restart?-yes
 
