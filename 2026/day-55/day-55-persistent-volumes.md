@@ -1,7 +1,7 @@
 # Day 55 – Persistent Volumes (PV) and Persistent Volume Claims (PVC)
 
 ## Task
-Containers are ephemeral — when a Pod dies, everything inside it disappears. That is a serious problem for databases and anything that needs to survive a restart. Today you fix this with Persistent Volumes and Persistent Volume Claims.
+Containers are ephemeral — when a Pod dies, everything inside it disappears. That is a serious problem for databases and anything that needs to survive a restart. Today we fix this with Persistent Volumes and Persistent Volume Claims.
 
 ---
 
@@ -92,6 +92,17 @@ Access modes to know:
 **Verify:** How many PVs exist now? Which was manual, which was dynamic?
    -  2 pvs are tthere
          1) persistent-volume - this is the manual one 
-         2) pvc-97c9a618-dcac-407f-ba98-d47ddec7830a - this is the dynamic one 
+         2) pvc-97c9a618-dcac-407f-ba98-d47ddec7830a - this is the dynamic one
+
+---
+
+  ## Key Learnings
+
+- Containers are ephemeral and lose data when Pods are deleted.
+- Persistent Volumes provide storage independent of Pod lifecycle.
+- Persistent Volume Claims allow applications to request storage without knowing implementation details.
+- Static provisioning requires manual PV creation.
+- Dynamic provisioning automatically creates PVs through a StorageClass.
+- Reclaim policies determine what happens to storage after PVC deletion.
 
 ---
