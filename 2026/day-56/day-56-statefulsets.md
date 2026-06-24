@@ -124,6 +124,9 @@ The new pod reconnected to the same PVC.
 <img width="1767" height="895" alt="task-6 1" src="https://github.com/user-attachments/assets/862301b4-8833-42a9-9021-410a618f369e" />
 <img width="1720" height="536" alt="task-6 2" src="https://github.com/user-attachments/assets/d4820773-f24e-49b7-8b7c-fb6f809a7119" />
 
+
+**Verify:** After scaling down, how many PVCs exist? -5
+
 ## Key Takeaways
 
 - Deployments are best for stateless applications.
@@ -131,9 +134,5 @@ The new pod reconnected to the same PVC.
 - Each StatefulSet pod gets its own Persistent Volume Claim.
 - Data survives pod recreation because storage remains attached to the pod identity.
 - Scaling down does not remove PVCs, preventing accidental data loss.
-
-
-
-**Verify:** After scaling down, how many PVCs exist? -5
 
 ---
