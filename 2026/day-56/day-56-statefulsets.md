@@ -32,6 +32,7 @@ Delete the Deployment before moving on.
 
 
 **Verify:** Why would random pod names be a problem for a database cluster?
+   - Random pod names make it difficult for database nodes to identify and communicate with each other
 
 ---
 
@@ -43,7 +44,7 @@ Delete the Deployment before moving on.
 A Headless Service creates individual DNS entries for each pod instead of load-balancing to one IP. StatefulSets require this.
 
 
-#### [headless-service.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-56/Manifest-file/headless-service.ymlnginx-deployment.yml)<br/>
+#### [headless-service.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-56/Manifest-file/headless-service.yml)<br/>
 
 
 <img width="982" height="292" alt="task-2" src="https://github.com/user-attachments/assets/f4cc16db-f983-42ab-b841-7235dee9d3a0" />
@@ -72,8 +73,16 @@ Check the PVCs: `kubectl get pvc` — you should see `web-data-web-0`, `web-data
 
 
 **Verify:** What are the exact pod names and PVC names?
-  pod - web-0, web-1, web-2
-  pvc - web-volume-web-0, web-volume-web-1, web-volume-web-2
+   
+   Pods:
+   - web-0
+   - web-1
+   - web-2
+   
+   PVCs:
+   - web-volume-web-0
+   - web-volume-web-1
+   - web-volume-web-2
 
 ---
 
@@ -114,7 +123,6 @@ The new pod reconnected to the same PVC.
 
 <img width="1767" height="895" alt="task-6 1" src="https://github.com/user-attachments/assets/862301b4-8833-42a9-9021-410a618f369e" />
 <img width="1720" height="536" alt="task-6 2" src="https://github.com/user-attachments/assets/d4820773-f24e-49b7-8b7c-fb6f809a7119" />
-
 
 
 
