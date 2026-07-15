@@ -128,5 +128,48 @@ A startup probe gives slow-starting containers extra time. While it runs, livene
 **Verify:** What would happen if `failureThreshold` were 2 instead of 12?
 - With failureThreshold: 2 and periodSeconds: 5, Kubernetes allows only about 10 seconds for the application to start. Since the container takes 20 seconds to create /tmp/started, the startup probe fails twice, Kubernetes restarts the container, and the Pod keeps restarting without ever becoming healthy
 
+
+### Requests vs Limits (Scheduling vs Enforcement)
+  `Requests:` A request tells Kubernetes that a container needs at least a specific amount of CPU and memory to run. The Kubernetes scheduler uses these values to decide which node has enough available resources to place the Pod.
+
+  
+
+  `Limits:` A limit defines the maximum amount of CPU and memory that a container is allowed to use. Kubernetes enforces these limits while the container is running to prevent it from consuming excessive resources.
+
+  
+
+### What happens when CPU or memory limits are exceeded  
+  - If a container tries to use more CPU than its configured limit, Kubernetes throttles the CPU usage. The container continues running, but its performance may slow down because it cannot use more CPU than the defined limit.
+
+    
+
+  - If a container exceeds its memory limit, Kubernetes immediately terminates the container with an OOMKilled error Exit Code 137 to protect the node from running out of memory.
+
+
+
+### Liveness vs readiness vs startup probes
+  `Startup probe` 
+  
+  A startup probe checks whether a container has started successfully. While the startup probe is running, Kubernetes disables both liveness and readiness probes. Once the startup probe succeeds, the other probes begin running normally. If the startup probe repeatedly fails, Kubernetes restarts the container.
+
+    
+    
+
+Use case: Ideal for applications that require a long startup or initialization time.
+  
+  `Readiness probe`
+    
+  A readiness probe checks whether a container is ready to receive traffic. If the probe fails, Kubernetes removes the Pod from the Service endpoints and stops sending requests to it. The container is not restarted. Once the probe succeeds again, the Pod is added back to the Service endpoints.
+    
+
+Use case: Applications that need time to initialize or depend on other services before they can serve requests.
+
+  `Liveness probes`
+   
+  A liveness probe checks whether a container is still healthy and functioning correctly. If the probe fails repeatedly, Kubernetes assumes the application is unhealthy, terminates the container, and restarts it automatically.
+    
+
+Use case: Detecting applications that are running but stuck in an unresponsive or unrecoverable state.
+    
 ---
 
