@@ -17,6 +17,7 @@ CPU is in millicores: `100m` = 0.1 CPU. Memory is in mebibytes: `128Mi`.
 **Requests** = guaranteed minimum (scheduler uses this for placement). **Limits** = maximum allowed (kubelet enforces at runtime).
 
 
+#### [resource-pod.yaml](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-57/Manifest-file/pod-resources.yml)<br/>
 <img width="1880" height="965" alt="task-1" src="https://github.com/user-attachments/assets/4b56e2ca-ab05-4e3e-95c8-d2000b6eb081" />
 
 
@@ -34,6 +35,7 @@ CPU is throttled when over limit. Memory is killed — no mercy.
 
 Check `kubectl describe pod` for `Reason: OOMKilled` and `Exit Code: 137` (128 + SIGKILL).
 
+#### [oom-killed.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-57/Manifest-file/oom-killed.yml)<br/>
 <img width="881" height="922" alt="task-2" src="https://github.com/user-attachments/assets/b9729bd7-17af-4664-88ab-4792ddb91e27" />
 
 
@@ -47,6 +49,8 @@ Check `kubectl describe pod` for `Reason: OOMKilled` and `Exit Code: 137` (128 +
 1. Write a Pod manifest requesting `cpu: 100` and `memory: 128Gi`
 2. Apply and check — STATUS stays `Pending` forever
 3. Run `kubectl describe pod` and read the Events — the scheduler says exactly why: insufficient resources
+
+#### [pod-pending.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-57/Manifest-file/pod-pending.yml)<br/>
 
 <img width="742" height="360" alt="task-3 1" src="https://github.com/user-attachments/assets/b60cfd7c-51e8-4cf2-8901-6b3969a97cd0" />
 
@@ -64,7 +68,8 @@ A liveness probe detects stuck containers. If it fails, Kubernetes restarts the 
 2. Add a liveness probe using `exec` that runs `cat /tmp/healthy`, with `periodSeconds: 5` and `failureThreshold: 3`
 3. After the file is deleted, 3 consecutive failures trigger a restart. Watch with `kubectl get pod -w`
 
-
+#### [livenessprobe.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-57/Manifest-file/livenessprobe.yml)<br/>
+<img width="1452" height="627" alt="task-4" src="https://github.com/user-attachments/assets/63acfbfb-93dc-4f5f-a64a-b4340e80cca0" />
 
 
 **Verify:** How many times has the container restarted?
@@ -80,6 +85,9 @@ A readiness probe controls traffic. Failure removes the Pod from Service endpoin
 3. Check `kubectl get endpoints readiness-svc` — the Pod IP is listed
 4. Break the probe: `kubectl exec <pod> -- rm /usr/share/nginx/html/index.html`
 5. Wait 15 seconds — Pod shows `0/1` READY, endpoints are empty, but the container is NOT restarted
+
+#### [readinessprobe.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-57/Manifest-file/readinessprobe.yml)<br/>
+
 
 <img width="1166" height="712" alt="task-5 1" src="https://github.com/user-attachments/assets/32bfebe1-e802-4609-8313-4d6d4ac592b1" />
 
@@ -102,6 +110,9 @@ A startup probe gives slow-starting containers extra time. While it runs, livene
 1. Write a Pod manifest where the container takes 20 seconds to start (e.g., `sleep 20 && touch /tmp/started`)
 2. Add a `startupProbe` checking for `/tmp/started` with `periodSeconds: 5` and `failureThreshold: 12` (60 second budget)
 3. Add a `livenessProbe` that checks the same file — it only kicks in after startup succeeds
+
+
+#### [startupprobe.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-57/Manifest-file/startupprobe.yml)<br/>
 
 <img width="900" height="421" alt="task-6" src="https://github.com/user-attachments/assets/79846b7d-410b-425d-a19a-9d8a0b7d344f" />
 
