@@ -30,7 +30,7 @@ Yesterday you set resource requests and limits. Today you put that to work. Inst
 
 
 **Verify:** Which pod is using the most CPU right now?
-  - kube-apiserver-devops-cluster-control-plane using the most cpu right now 
+  - The `kube-apiserver-devops-cluster-control-plane` Pod was using the highest CPU at the time of observation.
 
 ---
 
@@ -47,7 +47,8 @@ Yesterday you set resource requests and limits. Today you put that to work. Inst
 
 Without CPU requests, HPA cannot work — this is the most common HPA setup mistake.
 
-**Verify:** What is the current CPU usage of the Pod?- 1m
+**Verify:** What is the current CPU usage of the Pod?
+      - The current CPU usage of the `php-apache-deployment` Pod was approximately **1m**, indicating the application was idle before load generation.
 
 ---
 
@@ -63,7 +64,8 @@ This scales up when average CPU exceeds 50% of requests, and down when it drops 
 
 
 **Verify:** What does the TARGETS column show?
-    - Its show <unknown> for first few secpnds and after that it show 0% and varies according to the cpu utilization
+    - Initially, the `TARGETS` column displayed `<unknown>` because Metrics Server had not yet provided CPU metrics.
+    - After a few seconds, it changed to `0%/50%` and continued updating dynamically based on the application's CPU utilization.
 
 ---
 
@@ -79,7 +81,8 @@ This scales up when average CPU exceeds 50% of requests, and down when it drops 
 
 <img width="1057" height="905" alt="task 5 3" src="https://github.com/user-attachments/assets/c9c07d86-b170-4746-a1b9-2882dbdc3a7f" />
 
-**Verify:** How many replicas did HPA scale to under load? -9
+**Verify:** How many replicas did HPA scale to under load? 
+      - The HPA automatically scaled the Deployment from **1 replica to 9 replicas** after the average CPU utilization exceeded the configured target of **50%**.
 
 ---
 
@@ -104,7 +107,7 @@ This scales up when average CPU exceeds 50% of requests, and down when it drops 
 
 
 **Verify:** What does the `behavior` section control?
-    -It controls how aggressively the HPA changes the number of replicas.
+    - The `behavior` section controls how quickly the Horizontal Pod Autoscaler adds or removes Pods.
 
 ---
 
