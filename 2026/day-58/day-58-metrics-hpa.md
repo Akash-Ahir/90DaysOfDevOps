@@ -39,6 +39,9 @@ Yesterday you set resource requests and limits. Today you put that to work. Inst
 2. Set `resources.requests.cpu: 200m` — HPA needs this to calculate utilization percentages
 3. Expose it as a Service: `kubectl expose deployment php-apache --port=80`
 
+#### [php-deployment.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-58/Manifest-file/php-deployment.yml)<br/>
+
+
 <img width="1070" height="662" alt="task 3" src="https://github.com/user-attachments/assets/f7752856-e9ac-4790-aa04-f743d2d96789" />
 
 
@@ -85,6 +88,11 @@ This scales up when average CPU exceeds 50% of requests, and down when it drops 
 2. Write an HPA manifest using `autoscaling/v2` API with CPU target at 50% utilization
 3. Add a `behavior` section to control scale-up speed (no stabilization) and scale-down speed (300 second window)
 4. Apply and verify with `kubectl describe hpa`
+
+
+
+#### [hpa.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-58/Manifest-file/hpa.yml)<br/>
+
 
 <img width="1861" height="912" alt="task 6" src="https://github.com/user-attachments/assets/56b4d8c1-4f1e-4372-b342-e4849e6f8667" />
 
