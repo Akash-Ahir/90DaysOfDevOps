@@ -32,9 +32,11 @@ Three core concepts:
 <img width="1851" height="551" alt="task 2" src="https://github.com/user-attachments/assets/e4888ee0-a043-429b-b837-0956c71b5cf8" />
 
 
-**Verify:** How many charts does Bitnami have?
-    - helm search repo bitnami | wc -l
-      -145
+  **Verify:** How many charts does Bitnami have?
+      
+  - helm search repo bitnami | wc -l
+    
+  - 145
 ---
 
 ## Task 3: Install a Chart
