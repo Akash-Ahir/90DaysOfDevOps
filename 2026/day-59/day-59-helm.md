@@ -34,9 +34,7 @@ Three core concepts:
 
   **Verify:** How many charts does Bitnami have?
       
-  - helm search repo bitnami | wc -l
-    
-  - 145
+  - The Bitnami repository currently contains 145 charts
 ---
 
 ## Task 3: Install a Chart
