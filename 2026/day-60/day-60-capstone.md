@@ -12,6 +12,9 @@ Ten days of Kubernetes — clusters, Pods, Deployments, Services, ConfigMaps, Se
 1. Create a `capstone` namespace
 2. Set it as your default: `kubectl config set-context --current --namespace=capstone`
 
+#### [namespace.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-60/Manifest-files/namespace.yml)<br/>
+
+
 <img width="1077" height="367" alt="task-1" src="https://github.com/user-attachments/assets/372e97f3-3d42-4678-aa14-248fee76420d" />
 
 
@@ -20,11 +23,19 @@ Ten days of Kubernetes — clusters, Pods, Deployments, Services, ConfigMaps, Se
 ## Task 2: Deploy MySQL (Days 54-56)
 1. Create a Secret with `MYSQL_ROOT_PASSWORD`, `MYSQL_DATABASE`, `MYSQL_USER`, and `MYSQL_PASSWORD` using `stringData`
 
+#### [secrets.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-60/Manifest-files/secrets.yml)<br/>
+
+
 
 <img width="731" height="177" alt="task-2 1" src="https://github.com/user-attachments/assets/e309aa56-5b19-4e12-82a7-cf2ca179a0ca" />
 
 
+
+
 2. Create a Headless Service (`clusterIP: None`) for MySQL on port 3306
+
+#### [headless-service.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-60/Manifest-files/headless-service.yml)<br/>
+
 
 <img width="982" height="205" alt="task-2 2" src="https://github.com/user-attachments/assets/73a3c853-5d91-45e2-93d7-aebbcf0363fa" />
 
@@ -36,6 +47,9 @@ Ten days of Kubernetes — clusters, Pods, Deployments, Services, ConfigMaps, Se
    - A `volumeClaimTemplates` section requesting 1Gi of storage, mounted at `/var/lib/mysql`
 4. Verify MySQL works: `kubectl exec -it mysql-0 -- mysql -u <user> -p<password> -e "SHOW DATABASES;"`
 
+#### [mysql-statefulset.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-60/Manifest-files/mysql-statefulset.yml)<br/>
+
+
 <img width="1396" height="432" alt="task-2 3" src="https://github.com/user-attachments/assets/b5136203-8fab-4f5e-b135-31aad8cd63c5" />
 
 
@@ -46,6 +60,9 @@ Ten days of Kubernetes — clusters, Pods, Deployments, Services, ConfigMaps, Se
 ## Task 3: Deploy WordPress (Days 52, 54, 57)
 1. Create a ConfigMap with `WORDPRESS_DB_HOST` set to `mysql-0.mysql.capstone.svc.cluster.local:3306` and `WORDPRESS_DB_NAME`
 
+#### [configmap.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-60/Manifest-files/configmap.yml)<br/>
+
+
 <img width="751" height="217" alt="task-3 1" src="https://github.com/user-attachments/assets/a4c67e7e-8c58-482a-876b-a2f92ada78c7" />
 
 
@@ -55,6 +72,9 @@ Ten days of Kubernetes — clusters, Pods, Deployments, Services, ConfigMaps, Se
    - Has resource requests and limits
    - Has a liveness probe and readiness probe on `/wp-login.php` port 80
 3. Wait until both pods show `1/1 Running`
+
+#### [wordpress-deployment.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-60/Manifest-files/wordpress-deployment.yml)<br/>
+
 
 <img width="1035" height="567" alt="task-3 2" src="https://github.com/user-attachments/assets/18b10abb-9638-48c1-b0d0-afe6b4ac616e" />
 
@@ -69,6 +89,9 @@ Ten days of Kubernetes — clusters, Pods, Deployments, Services, ConfigMaps, Se
 2. Access WordPress in your browser:
    - Minikube: `minikube service wordpress -n capstone`
    - Kind: `kubectl port-forward svc/wordpress 8080:80 -n capstone`
+  
+#### [wordpress-svc.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-60/Manifest-files/wordpress-svc.yml)<br/>
+
   
 <img width="1157" height="652" alt="task-4 1" src="https://github.com/user-attachments/assets/bf45271e-937f-4ff5-a2dc-45f5ca7d3245" />
 
@@ -98,6 +121,9 @@ Ten days of Kubernetes — clusters, Pods, Deployments, Services, ConfigMaps, Se
 1. Write an HPA manifest targeting the WordPress Deployment with CPU at 50%, min 2, max 10 replicas
 2. Apply and check: `kubectl get hpa -n capstone`
 3. Run `kubectl get all -n capstone` for the complete picture
+
+#### [hpa.yml](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-60/Manifest-files/hpa.yml)<br/>
+
 
 <img width="1687" height="622" alt="task-6" src="https://github.com/user-attachments/assets/73b49f5c-8157-4afc-851c-5de22473214e" />
 
