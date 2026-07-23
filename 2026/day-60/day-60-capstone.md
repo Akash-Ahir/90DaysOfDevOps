@@ -145,5 +145,11 @@ Ten days of Kubernetes — clusters, Pods, Deployments, Services, ConfigMaps, Se
 3. Clean up the Helm deployment
 
 
+## Documentation
+Create `day-60-capstone.md` with:
+- Architecture of your deployment (which resources connect to which)
+<img width="537" height="1028" alt="archi drawio" src="https://github.com/user-attachments/assets/49d9397b-6413-4015-897b-5c87053e3080" />
+
+
 ---
 
