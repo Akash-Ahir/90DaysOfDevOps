@@ -39,12 +39,10 @@ Before touching the terminal, research and write short notes on:
   
           
 5. What does it mean that Terraform is "declarative" and "cloud-agnostic"?
-  - 
 
-
-
-
-Write this in your own words -- not copy-pasted definitions.
+  - `Declarative`- write code that describes the final desired state of your infrastructure, and the tool figures out the exact step-by-step actions needed to make it happen
+  
+  - `cloud-agnostic`- it means that we are not dependent on a single platform cloud service we are independent to use any other platform also 
 
 ---
 
@@ -83,13 +81,14 @@ aws configure
 aws sts get-caller-identity
 ```
 
-You should see your AWS account ID and ARN.
+You should see your AWS account ID and ARN. - YES
 
 
 
 ---
 
 ## Task 3: Your First Terraform Config -- Create an S3 Bucket
+
 Create a project directory and write your first Terraform config:
 
 ```bash
@@ -125,7 +124,13 @@ terraform apply     # Create the bucket (type 'yes' to confirm)
 
 Go to the AWS S3 console and verify your bucket exists.
 
+  - Yes the bucket is created 
+
 **Document:** What did `terraform init` download? What does the `.terraform/` directory contain?
+
+  `terraform init`- This will scan our .tf file in that folder and install all the required automation things and create env
+
+  `.terraform/`- Contains downloaded provider plugins and metadata that Terraform needs to communicate with AWS
 
 ---
 
@@ -146,14 +151,14 @@ terraform apply
 
 
 
-
-
-Go to the AWS EC2 console and verify your instance is running with the correct name tag.
+Go to the AWS EC2 console and verify your instance is running with the correct name tag. 
 
 <img width="617" height="810" alt="task-4 2" src="https://github.com/user-attachments/assets/f5e9f034-2775-42bd-828e-261a8fd60da5" />
 
 
 **Document:** How does Terraform know the S3 bucket already exists and only the EC2 instance needs to be created?
+ 
+  - Due to terraform state file terraform tracks everything it creates in a state file
 
 ---
 
@@ -190,16 +195,28 @@ Terraform tracks everything it creates in a state file. Time to inspect it.
 
 3. Answer these questions in your notes:
    - What information does the state file store about each resource?
+  
+     - Resource IDs, ARNs, Public IPs, Metadata and etc
+       
    - Why should you never manually edit the state file?
-   - Why should the state file not be committed to Git?
+     
+      - If we edit it manually then terraform may get confused between the resources it can show the resources is created so it will not create the resources
 
+   - Why should the state file not be committed to Git?
+       - because doing so can result in data loss or exposure of secrets stored in the state file
 ---
 
 ## Task 6: Modify, Plan, and Destroy
 1. Change the EC2 instance tag from `"TerraWeek-Day1"` to `"TerraWeek-Modified"` in your `main.tf`
 2. Run `terraform plan` and read the output carefully:
    - What do the `~`, `+`, and `-` symbols mean?
+     `~` this will show the changes/update has to be made in existing resources
+     `+` the resources which is going to be added 
+     `-` the resources which is going to delete/destroyed
+
    - Is this an in-place update or a destroy-and-recreate?
+     - its and in-place update (~)
+    
   
 <img width="1482" height="522" alt="task-6 1" src="https://github.com/user-attachments/assets/ee5ad12f-2e97-4a2b-88d3-e55af45d898f" />
 
@@ -226,18 +243,6 @@ terraform destroy
 
 ---
 
-## Documentation
-Create `day-61-terraform-intro.md` with:
-- IaC explanation in your own words (3-4 sentences)
-- Screenshot of `terraform apply` creating your S3 bucket and EC2 instance
-- Screenshot of the resources in the AWS console
-- What each Terraform command does (init, plan, apply, destroy, show, state list)
-- What the state file contains and why it matters
-
-
-Share on LinkedIn: "Started the TerraWeek Challenge -- installed Terraform, created my first S3 bucket and EC2 instance using code, and destroyed it all with one command. Infrastructure as Code just clicked."
 
 `#90DaysOfDevOps` `#TerraWeek` `#DevOpsKaJosh` `#TrainWithShubham`
 
-Happy Learning!
-**TrainWithShubham**
