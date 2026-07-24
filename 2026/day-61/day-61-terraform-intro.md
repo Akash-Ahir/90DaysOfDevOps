@@ -7,6 +7,7 @@ By the end of today, you will have created real AWS resources using nothing but 
 
 
 ---
+### TERRAFORM FILE: [main.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-61/Terraform-files/main.tf)<br/>
 
 ## Challenge Tasks
 
