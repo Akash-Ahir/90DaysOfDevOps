@@ -16,12 +16,13 @@ Before touching the terminal, research and write short notes on:
 
 ### 1. What is Infrastructure as Code (IaC)? Why does it matter in DevOps?
 
-  `What is Terraform`-Terraform is the practice of managing and provisioning IT infrastructure like servers, databases, and network through machine readable code insted of clicking through manual web interface
+  `What is Terraform`-Terraform allows us to create, update, and manage cloud infrastructure using configuration files instead of manually provisioning resources through a cloud
   
    `Why does it matter in DevOps`- Manually provisioning cloud infrastructure is slow, hard to track, and prone to human errors. Infrastructure as a code matters because it provides version control, scalability and automated deployments. With terraform devops team can create indentical environment in minutes ensure consistency, and recovery instently from disasters by simple rerunning the code
 
 ### 2. What problems does IaC solve compared to manually creating resources in the AWS console?
   - Manual creation takes time and is prone to human errors which result in saving `time`, `efficiency`, `expenses`, `automation`, `not wasted resources`, and `not dependent on other`
+
 ### 3. How is Terraform different from AWS CloudFormation, Ansible, and Pulumi?
 
    ### **Terraform vs Ansible** ###
@@ -32,7 +33,7 @@ Before touching the terminal, research and write short notes on:
 
   ### **Terraform vs Cloud Formation** ###
   
-   `Terraform`- Terraform is owned by harshicorp and can be used for multiple cloud providers 
+   `Terraform`- Terraform is developed by HashiCorp and can be used for multiple cloud providers 
 
    `Cloud Formation` - Cloud Formation is  owned by AWS and can be only used for AWS cloud services
   
@@ -41,7 +42,7 @@ Before touching the terminal, research and write short notes on:
 
   - `Declarative`- write code that describes the final desired state of your infrastructure, and the tool figures out the exact step-by-step actions needed to make it happen
   
-  - `cloud-agnostic`- it means that we are not dependent on a single platform cloud service we are independent to use any other platform also 
+  - `cloud-agnostic`- it means terraform is not limited to a single cloud provider the same terraform concepts can be used to manage infrastructure across AWS, Azure, Google Cloud, and many other platforms
 
 ---
 
@@ -127,7 +128,7 @@ Go to the AWS S3 console and verify your bucket exists.
 
 **Document:** What did `terraform init` download? What does the `.terraform/` directory contain?
 
-  `terraform init`- This will scan our .tf file in that folder and install all the required automation things and create env
+  `terraform init`- This will scan our .tf file in that folder and install all the required automation things and prepares the working directory for Terraform
 
   `.terraform/`- Contains downloaded provider plugins and metadata that Terraform needs to communicate with AWS
 
