@@ -7,6 +7,12 @@ Understanding dependencies is what separates a Terraform beginner from someone w
 
 ---
 
+### TERRAFORM FILE: 
+[main.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-62/Terraform-files/main.tf)<br/>
+
+ [providers.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-62/Terraform-files/providers.tf)<br/>
+
+
 ## Challenge Tasks
 
 ## Task 1: Explore the AWS Provider
@@ -174,11 +180,3 @@ terraform destroy
 
   
 ---
-
-## Learn in Public
-Share on LinkedIn: "Built a complete AWS networking stack with Terraform today -- VPC, subnets, internet gateway, route tables, security groups, and an EC2 instance. All connected through dependency graphs. Terraform decides the order, you define the desired state."
-
-`#90DaysOfDevOps` `#TerraWeek` `#DevOpsKaJosh` `#TrainWithShubham`
-
-Happy Learning!
-**TrainWithShubham**
