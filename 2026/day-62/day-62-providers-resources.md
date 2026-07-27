@@ -21,8 +21,7 @@ Understanding dependencies is what separates a Terraform beginner from someone w
 
 
 4. Read the provider lock file `.terraform.lock.hcl` -- what does it do?
-  -  lock file is a file that belongs to the configuration as a whole, rather than to each separate module in the configuration. For that reason Terraform creates it and expects to find it in your current working directory when you run Terraform
-
+   - This ensures that every team member working on the project uses the same provider version, preventing unexpected behavior caused by version differences. Terraform creates and updates this file automatically whenever providers are installed or upgraded.
 
 <img width="917" height="590" alt="task-1 2" src="https://github.com/user-attachments/assets/d8b43a6a-d06a-487e-8c68-9db5d78d3813" />
 
@@ -68,13 +67,17 @@ Look at your `main.tf` carefully:
 
 Answer these questions:
 - How does Terraform know to create the VPC before the subnet?
-  - With the help of Implicit Dependencies `vpc_id = aws_vpc.main.id` terraform know subnet is depends on vpc
+  - Terraform analyzes references between resources before creating anything. Since the subnet uses aws_vpc.main.id, Terraform automatically understands that the VPC must exist first. It builds this relationship into its dependency graph and creates the resources in the correct order
     
 - What would happen if you tried to create the subnet before the VPC existed?
-  - It will show error
+  - AWS will reject the request because a subnet cannot exist without an associated VPC. Terraform prevents this situation by creating the VPC first based on the dependency graph
    
 - Find all implicit dependencies in your config and list them
-  - VPC,subnet,internet gateway, route table, route table association 
+  - aws_subnet.my_subnet depends on aws_vpc.my_vpc
+  - aws_internet_gateway.my_internet_gateway depends on aws_vpc.my_vpc
+  - aws_route_table.my_route_table depends on aws_vpc.my_vpc
+  - aws_route_table.my_route_table depends on aws_internet_gateway.my_internet_gateway
+  - aws_route_table_association.route_table_association depends on aws_route_table.my_route_table
 
 ---
 
