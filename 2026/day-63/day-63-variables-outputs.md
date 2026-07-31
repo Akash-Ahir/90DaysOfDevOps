@@ -9,6 +9,11 @@ This is the difference between a config that works once and a config you can use
 
 ## Challenge Tasks
 
+### TERRAFORM FILE: 
+[main.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-63/Terraforms-files/main.tf)<br/>
+
+ [providers.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-63/Terraforms-files/providers.tf)<br/>
+
 ## Task 1: Extract Variables
 Take your Day 62 infrastructure config and refactor it:
 
@@ -24,6 +29,10 @@ Take your Day 62 infrastructure config and refactor it:
 
 2. Replace every hardcoded value in `main.tf` with `var.<name>` references
 3. Run `terraform plan` -- it should prompt you for `project_name` since it has no default
+
+
+### [variables.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-63/Terraforms-files/variables.tf)<br/>
+
 
 <img width="1497" height="352" alt="task-1 1" src="https://github.com/user-attachments/assets/1d360141-79d5-485d-9409-cfe298cf749a" />
 
@@ -58,6 +67,9 @@ environment  = "dev"
 instance_type = "t2.micro"
 ```
 
+### [terraform.tfvars](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-63/Terraforms-files/terraform.tfvars)<br/>
+
+
 2. Create `prod.tfvars`:
 ```hcl
 project_name = "terraweek"
@@ -66,6 +78,9 @@ instance_type = "t3.small"
 vpc_cidr     = "10.1.0.0/16"
 subnet_cidr  = "10.1.1.0/24"
 ```
+
+### [prod.tfvars](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-63/Terraforms-files/prod.tfvars)<br/>
+
 
 3. Apply with the default file:
 ```bash
@@ -118,6 +133,7 @@ Create an `outputs.tf` file with outputs for:
 6. `security_group_id` -- the security group ID
 
 
+### [outputs.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-63/Terraforms-files/outputs.tf)<br/>
 
 
 <img width="847" height="235" alt="task-3 1" src="https://github.com/user-attachments/assets/3095aff6-6881-4829-930b-0fae7db0d524" />
