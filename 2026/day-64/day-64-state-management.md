@@ -8,6 +8,17 @@ Today you learn to manage state like a professional -- remote backends, locking,
 
 ---
 
+### TERRAFORM FILE: 
+[main.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-64/Terraform-files/main.tf)<br/>
+[outputs.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-64/Terraform-files/outputs.tf)<br/>
+[prod.tfvars](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-64/Terraform-files/prod.tfvars)<br/>
+[providers.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-64/Terraform-files/providers.tf)<br/>
+[state-backend.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-64/Terraform-files/state-backend.tf)<br/>
+[terraform.tfvars](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-64/Terraform-files/terraform.tfvars)<br/>
+[variables.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/tree/master/2026/day-64/Terraform-files/variables.tf)<br/>
+
+
+
 ## Challenge Tasks
 
 ## Task 1: Inspect Your Current State
