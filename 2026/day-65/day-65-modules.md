@@ -51,15 +51,23 @@ Create `modules/ec2-instance/`:
    - `security_group_ids` (list of strings)
    - `instance_name` (string)
    - `tags` (map of strings, default: `{}`)
+  
+     ### [variables.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-65/Terraform-files/terraform-module/modules/ec2-instance/variables.tf/)<br/>
 
 2. **`main.tf`** -- define the resource:
    - `aws_instance` using all the variables
    - Merge the Name tag with additional tags
+      ### [main.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-65/Terraform-files/terraform-module/modules/ec2-instance/main.tf/)<br/>
+  
+
 
 3. **`outputs.tf`** -- expose:
    - `instance_id`
    - `public_ip`
    - `private_ip`
+
+     ### [outputs.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-65/Terraform-files/terraform-module/modules/ec2-instance/outputs.tf/)<br/>
+
 
 Do NOT apply yet -- just write the module.
 
@@ -74,13 +82,22 @@ Create `modules/security-group/`:
    - `ingress_ports` (list of numbers, default: `[22, 80]`)
    - `tags` (map of strings, default: `{}`)
 
+     ### [variables.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-65/Terraform-files/terraform-module/modules/security-group/variables.tf)<br/>
+
+
 2. **`main.tf`** -- define the resource:
    - `aws_security_group` in the given VPC
    - Use `dynamic "ingress"` block to create rules from the `ingress_ports` list
    - Allow all egress
+  
+     ### [main.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-65/Terraform-files/terraform-module/modules/security-group/main.tf)<br/>
+
 
 3. **`outputs.tf`** -- expose:
    - `sg_id`
+  
+     ### [outputs.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-65/Terraform-files/terraform-module/modules/security-group/outputs.tf)<br/>
+
 
 This is your first time using a `dynamic` block -- it loops over a list to generate repeated nested blocks.
 
@@ -89,7 +106,16 @@ This is your first time using a `dynamic` block -- it loops over a list to gener
 ## Task 4: Call Your Modules from Root
 In the root `main.tf`, wire everything together:
 
+   ### [main.tf (manually created vpc)](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-65/Terraform-files/terraform-module/main.tf%20(%20manually%20creating%20vpc))<br/>
+
+   ### [variables.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-65/Terraform-files/terraform-module/variables.tf)<br/>
+
+   ### [outputs.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-65/Terraform-files/terraform-module/outputs.tf)<br/>
+
+
 1. Create a VPC and subnet directly (or reuse your Day 62 config)
+
+
 2. Call the security group module:
 ```hcl
 module "web_sg" {
@@ -170,6 +196,8 @@ terraform apply
 
 ## Task 5: Use a Public Registry Module
 Instead of building your own VPC from scratch, use the official module from the Terraform Registry.
+
+   ### [main.tf (vpc and subnet from registry)](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-65/Terraform-files/terraform-module/main.tf%20(vpc%20and%20subnet%20from%20aws%20registry))<br/>
 
 1. Replace your hand-written VPC resources with:
 ```hcl
@@ -267,11 +295,3 @@ terraform destroy
 - Add a README.md to every custom module
 
 ---
-
-## Learn in Public
-Share on LinkedIn: "Built my first custom Terraform modules today -- EC2 and security group modules called multiple times with different configs. Then replaced 50 lines of VPC code with one registry module. Modules are the key to scalable infrastructure as code."
-
-`#90DaysOfDevOps` `#TerraWeek` `#DevOpsKaJosh` `#TrainWithShubham`
-
-Happy Learning!
-**TrainWithShubham**
