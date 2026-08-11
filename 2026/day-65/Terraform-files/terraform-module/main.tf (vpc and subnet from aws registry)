@@ -5,8 +5,8 @@ module "vpc" {
   name = "terraweek-vpc"
   cidr = "10.0.0.0/16"
 
-  azs             = ["us-east-1a", "us-east-1b"]
-  public_subnets  = ["10.0.1.0/24", "10.0.2.0/24"]
+  azs = ["us-east-1a", "us-east-1b"]
+  public_subnets = ["10.0.1.0/24", "10.0.2.0/24"]
   private_subnets = ["10.0.3.0/24", "10.0.4.0/24"]
 
   enable_nat_gateway = false
@@ -17,7 +17,7 @@ module "vpc" {
 
 locals {
   common_tags = {
-    Project     = "Terraform-modules"
+    Project = "Terraform-modules"
     Environment = "dev"
     ManagedBy = "Terra-Worker"
 
@@ -27,30 +27,30 @@ locals {
 
 
 data "aws_ami" "ami" {
-  owners      = ["amazon"]
+  owners = ["amazon"]
   most_recent = true
   filter {
-    name   = "name"
+    name = "name"
     values = ["amzn2-ami-hvm-*-x86_64-gp2"]
   }
   filter {
-    name   = "root-device-type"
+    name = "root-device-type"
     values = ["ebs"]
   }
 
   filter {
-    name   = "virtualization-type"
+    name = "virtualization-type"
     values = ["hvm"]
   }
 }
 
 
 module "web_sg" {
-  source        = "./modules/security-group"
-  vpc_id        = module.vpc.vpc_id
-  sg_name       = "terraweek-web-sg"
+  source = "./modules/security-group"
+  vpc_id = module.vpc.vpc_id
+  sg_name = "terraweek-web-sg"
   ingress_ports = [22, 80, 443]
-  tags          = local.common_tags
+  tags = local.common_tags
 
 
 
@@ -58,21 +58,21 @@ module "web_sg" {
 
 
 module "web_server" {
-  source             = "./modules/ec2-instance"
-  ami_id             = data.aws_ami.ami.id
-  instance_type      = "t3.micro"
-  subnet_id          = module.vpc.public_subnets[0]
+  source = "./modules/ec2-instance"
+  ami_id = data.aws_ami.ami.id
+  instance_type = "t3.micro"
+  subnet_id = module.vpc.public_subnets[0]
   security_group_ids = [module.web_sg.sg_id]
-  instance_name      = "terraweek-web"
-  tags               = local.common_tags
+  instance_name = "terraweek-web"
+  tags = local.common_tags
 }
 
 module "api_server" {
-  source             = "./modules/ec2-instance"
-  ami_id             = data.aws_ami.ami.id
-  instance_type      = "t3.micro"
-  subnet_id          = module.vpc.public_subnets[0]
+  source = "./modules/ec2-instance"
+  ami_id = data.aws_ami.ami.id
+  instance_type = "t3.micro"
+  subnet_id = module.vpc.public_subnets[0]
   security_group_ids = [module.web_sg.sg_id]
-  instance_name      = "terraweek-api"
-  tags               = local.common_tags
+  instance_name = "terraweek-api"
+  tags = local.common_tags
 }
