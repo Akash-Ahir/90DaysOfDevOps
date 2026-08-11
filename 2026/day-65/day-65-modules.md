@@ -34,6 +34,7 @@ Create all the directories and empty files. This is the standard layout every Te
 
 
 **Document:** What is the difference between a "root module" and a "child module"?
+
   `root module` - The root module is the main Terraform configuration it decides which modules to use and what values to pass to them
 
   `child module` - A child module contains reusable infrastructure logic that can be called and reused by the root module
