@@ -27,6 +27,9 @@ In `providers.tf`:
 2. Pin the Kubernetes provider (you will need it later)
 3. Set your region
 
+     ### [providers.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-66/Terraform-files/providers.tf)<br/>
+
+
 In `variables.tf`, define:
 - `region` (string)
 - `cluster_name` (string, default: `"terraweek-eks"`)
@@ -34,6 +37,9 @@ In `variables.tf`, define:
 - `node_instance_type` (string, default: `"t3.medium"`)
 - `node_desired_count` (number, default: `2`)
 - `vpc_cidr` (string, default: `"10.0.0.0/16"`)
+
+     ### [variables.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-66/Terraform-files/variables.tf)<br/>
+
 
 ---
 
@@ -56,6 +62,10 @@ private_subnet_tags = {
   "kubernetes.io/role/internal-elb" = 1
 }
 ```
+
+
+  ### [vpc.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-66/Terraform-files/vpc.tf)<br/>
+
 
 Run `terraform init` and `terraform plan` to verify the VPC config before moving on.
 
@@ -102,6 +112,10 @@ module "eks" {
 }
 ```
 
+
+  ### [eks.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-66/Terraform-files/eks.tf)<br/>
+
+
 Run:
 ```bash
 terraform init      # Download EKS module and its dependencies
@@ -139,6 +153,10 @@ output "cluster_region" {
   value = var.region
 }
 ```
+
+
+  ### [outputs.tf](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-66/Terraform-files/outputs.tf)<br/>
+
 
 3. Update your kubeconfig:
 ```bash
@@ -207,6 +225,10 @@ spec:
   - port: 80
     targetPort: 80
 ```
+
+
+  ### [nginx-deployment.yaml](https://github.com/Akash-Ahir/90DaysOfDevOps/blob/master/2026/day-66/Terraform-files/k8s/nginx-deployment.yaml)<br/>
+
 
 2. Apply:
 ```bash
