@@ -74,7 +74,8 @@ Run `terraform init` and `terraform plan` to verify the VPC config before moving
 
 
 **Document:** Why does EKS need both public and private subnets? What do the subnet tags do?
-
+  - Public subnets are used for internet-facing resources like LoadBalancers, while EKS worker nodes run in private subnets for better isolation. Private nodes can still access the internet through a NAT Gateway when needed
+  - The tags help Kubernetes/AWS identify which subnets should be used for public or internal LoadBalancers
 ---
 
 ## Task 3: Create the EKS Cluster with Registry Module
@@ -182,7 +183,7 @@ kubectl cluster-info
 
 
 
-**Verify:** Do you see 2 nodes in `Ready` state? Can you see the kube-system pods running?
+**Verify:** Do you see 2 nodes in `Ready` state? Can you see the kube-system pods running? -yes
 
 ---
 
@@ -253,7 +254,7 @@ kubectl get svc
 <img width="1440" height="297" alt="task 5 1" src="https://github.com/user-attachments/assets/0a551f1b-d266-43b7-8805-a2fec20d3f9a" />
 
 
-**Verify:** Can you access the Nginx welcome page through the LoadBalancer URL?
+**Verify:** Can you access the Nginx welcome page through the LoadBalancer URL? -yes
 
 <img width="1892" height="600" alt="task 5 2" src="https://github.com/user-attachments/assets/1f8316a0-aa0a-4674-b84e-486afb0a63b6" />
 
