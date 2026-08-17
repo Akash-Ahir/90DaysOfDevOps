@@ -337,27 +337,8 @@ terraform workspace delete prod
 
 ---
 
-## Hints
-- Each workspace has its own state file -- `terraform.tfstate.d/<workspace>/terraform.tfstate`
-- `terraform.workspace` is a built-in variable available in any config
-- You cannot delete a workspace you are currently on -- switch to `default` first
-- Different VPC CIDRs per environment prevent accidental peering conflicts
-- `terraform plan -var-file` does NOT auto-load `terraform.tfvars` when you specify `-var-file`
-- If you forget which workspace you are on: `terraform workspace show`
-- Workspaces work with remote backends too -- S3 key becomes `env:/<workspace>/terraform.tfstate`
-
----
 
 ## Documentation
-Create `day-67-terraweek-capstone.md` with:
-- Your complete project structure (directory tree)
-- All three custom module configs
-- Root `main.tf` showing workspace-aware module calls
-- All three tfvars files with the differences highlighted
-- Screenshot of all three environments running simultaneously in AWS
-- Screenshot of `terraform output` from each workspace
-- Your Terraform best practices guide (Task 6)
-- A table mapping each TerraWeek day to the concepts learned:
 
 | Day | Concepts |
 |-----|----------|
@@ -370,17 +351,3 @@ Create `day-67-terraweek-capstone.md` with:
 | 67 | Workspaces, multi-env, capstone project |
 
 ---
-
-## Submission
-1. Add `day-67-terraweek-capstone.md` to `2026/day-67/`
-2. Commit and push to your fork
-
----
-
-## Learn in Public
-Share on LinkedIn: "Completed the TerraWeek Challenge -- seven days from terraform init to a full multi-environment infrastructure project. Custom modules for VPC, security groups, and EC2. Three environments deployed with workspaces. One codebase, three isolated environments, zero console clicks."
-
-`#90DaysOfDevOps` `#TerraWeek` `#DevOpsKaJosh` `#TrainWithShubham`
-
-Happy Learning!
-**TrainWithShubham**
